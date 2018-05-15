@@ -3,31 +3,31 @@
  */
 package org.framed.iorm.editpolicydsl.serializer;
 
-import Editpolicymodel.AndConstraintRule;
-import Editpolicymodel.AndFeatureRule;
-import Editpolicymodel.ContainsCompartment;
-import Editpolicymodel.EditpolicymodelPackage;
-import Editpolicymodel.FalseConstraintRule;
-import Editpolicymodel.FalseFeatureRule;
-import Editpolicymodel.ImplicationConstraintRule;
-import Editpolicymodel.ImplicationFeatureRule;
-import Editpolicymodel.InCompartment;
-import Editpolicymodel.IsFeature;
-import Editpolicymodel.IsParent;
-import Editpolicymodel.IsSourceType;
-import Editpolicymodel.IsTarget;
-import Editpolicymodel.IsTargetType;
-import Editpolicymodel.Model;
-import Editpolicymodel.NotConstraintRule;
-import Editpolicymodel.NotFeatureRule;
-import Editpolicymodel.OrConstraintRule;
-import Editpolicymodel.OrFeatureRule;
-import Editpolicymodel.Policy;
-import Editpolicymodel.SourceEqualsTarget;
-import Editpolicymodel.SourceEqualsTargetType;
-import Editpolicymodel.TrueConstraintRule;
-import Editpolicymodel.TrueFeatureRule;
 import com.google.inject.Inject;
+import editpolicymodel.AndConstraintRule;
+import editpolicymodel.AndFeatureRule;
+import editpolicymodel.ContainsCompartment;
+import editpolicymodel.FalseConstraintRule;
+import editpolicymodel.FalseFeatureRule;
+import editpolicymodel.ImplicationConstraintRule;
+import editpolicymodel.ImplicationFeatureRule;
+import editpolicymodel.InCompartment;
+import editpolicymodel.IsFeature;
+import editpolicymodel.IsParent;
+import editpolicymodel.IsSourceType;
+import editpolicymodel.IsTarget;
+import editpolicymodel.IsTargetType;
+import editpolicymodel.Model;
+import editpolicymodel.NotConstraintRule;
+import editpolicymodel.NotFeatureRule;
+import editpolicymodel.OrConstraintRule;
+import editpolicymodel.OrFeatureRule;
+import editpolicymodel.Policy;
+import editpolicymodel.SourceEqualsTarget;
+import editpolicymodel.SourceEqualsTargetType;
+import editpolicymodel.TrueConstraintRule;
+import editpolicymodel.TrueFeatureRule;
+import editpolicymodel.editpolicymodelPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -52,75 +52,75 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == EditpolicymodelPackage.eINSTANCE)
+		if (epackage == editpolicymodelPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case EditpolicymodelPackage.AND_CONSTRAINT_RULE:
+			case editpolicymodelPackage.AND_CONSTRAINT_RULE:
 				sequence_AndConstraint(context, (AndConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.AND_FEATURE_RULE:
+			case editpolicymodelPackage.AND_FEATURE_RULE:
 				sequence_AndFeature(context, (AndFeatureRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.CONTAINS_COMPARTMENT:
+			case editpolicymodelPackage.CONTAINS_COMPARTMENT:
 				sequence_ContainsCompartmentConstrainRule(context, (ContainsCompartment) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.FALSE_CONSTRAINT_RULE:
+			case editpolicymodelPackage.FALSE_CONSTRAINT_RULE:
 				sequence_FalseConstraintRule(context, (FalseConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.FALSE_FEATURE_RULE:
+			case editpolicymodelPackage.FALSE_FEATURE_RULE:
 				sequence_FalseFeatureRule(context, (FalseFeatureRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IMPLICATION_CONSTRAINT_RULE:
+			case editpolicymodelPackage.IMPLICATION_CONSTRAINT_RULE:
 				sequence_ImplicationConstraint(context, (ImplicationConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IMPLICATION_FEATURE_RULE:
+			case editpolicymodelPackage.IMPLICATION_FEATURE_RULE:
 				sequence_ImplicationFeature(context, (ImplicationFeatureRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IN_COMPARTMENT:
+			case editpolicymodelPackage.IN_COMPARTMENT:
 				sequence_InCompartmentConstraintRule(context, (InCompartment) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IS_FEATURE:
+			case editpolicymodelPackage.IS_FEATURE:
 				sequence_IsFeature(context, (IsFeature) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IS_PARENT:
+			case editpolicymodelPackage.IS_PARENT:
 				sequence_IsParentConstraintRule(context, (IsParent) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IS_SOURCE_TYPE:
+			case editpolicymodelPackage.IS_SOURCE_TYPE:
 				sequence_IsSourceTypeConstraintRule(context, (IsSourceType) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IS_TARGET:
+			case editpolicymodelPackage.IS_TARGET:
 				sequence_IsTargetConstraintRule(context, (IsTarget) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.IS_TARGET_TYPE:
+			case editpolicymodelPackage.IS_TARGET_TYPE:
 				sequence_IsTargetTypeConstraintRule(context, (IsTargetType) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.MODEL:
+			case editpolicymodelPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.NOT_CONSTRAINT_RULE:
+			case editpolicymodelPackage.NOT_CONSTRAINT_RULE:
 				sequence_NotConstraintExpression(context, (NotConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.NOT_FEATURE_RULE:
+			case editpolicymodelPackage.NOT_FEATURE_RULE:
 				sequence_NotFeatureExpression(context, (NotFeatureRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.OR_CONSTRAINT_RULE:
+			case editpolicymodelPackage.OR_CONSTRAINT_RULE:
 				sequence_OrConstraint(context, (OrConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.OR_FEATURE_RULE:
+			case editpolicymodelPackage.OR_FEATURE_RULE:
 				sequence_OrFeature(context, (OrFeatureRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.POLICY:
+			case editpolicymodelPackage.POLICY:
 				sequence_Policy(context, (Policy) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.SOURCE_EQUALS_TARGET:
+			case editpolicymodelPackage.SOURCE_EQUALS_TARGET:
 				sequence_SourceEqualsTargetConstraintRule(context, (SourceEqualsTarget) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.SOURCE_EQUALS_TARGET_TYPE:
+			case editpolicymodelPackage.SOURCE_EQUALS_TARGET_TYPE:
 				sequence_SourceEqualsTargetTypeConstraintRule(context, (SourceEqualsTargetType) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.TRUE_CONSTRAINT_RULE:
+			case editpolicymodelPackage.TRUE_CONSTRAINT_RULE:
 				sequence_TrueConstraintRule(context, (TrueConstraintRule) semanticObject); 
 				return; 
-			case EditpolicymodelPackage.TRUE_FEATURE_RULE:
+			case editpolicymodelPackage.TRUE_FEATURE_RULE:
 				sequence_TrueFeatureRule(context, (TrueFeatureRule) semanticObject); 
 				return; 
 			}
@@ -251,10 +251,10 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_ImplicationConstraint(ISerializationContext context, ImplicationConstraintRule semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__LEFT_RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__LEFT_RULE));
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__RIGHT_RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__RIGHT_RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__LEFT_RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__LEFT_RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__RIGHT_RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.BINARY_CONSTRAINT_RULE__RIGHT_RULE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getImplicationConstraintAccess().getImplicationConstraintRuleLeftRuleAction_1_0(), semanticObject.getLeftRule());
@@ -272,10 +272,10 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_ImplicationFeature(ISerializationContext context, ImplicationFeatureRule semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.BINARY_FEATURE_RULE__LEFT_RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.BINARY_FEATURE_RULE__LEFT_RULE));
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.BINARY_FEATURE_RULE__RIGHT_RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.BINARY_FEATURE_RULE__RIGHT_RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.BINARY_FEATURE_RULE__LEFT_RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.BINARY_FEATURE_RULE__LEFT_RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.BINARY_FEATURE_RULE__RIGHT_RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.BINARY_FEATURE_RULE__RIGHT_RULE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getImplicationFeatureAccess().getImplicationFeatureRuleLeftRuleAction_1_0(), semanticObject.getLeftRule());
@@ -325,8 +325,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_IsFeature(ISerializationContext context, IsFeature semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.IS_FEATURE__FEATURE_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.IS_FEATURE__FEATURE_NAME));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.IS_FEATURE__FEATURE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.IS_FEATURE__FEATURE_NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIsFeatureAccess().getFeatureNameFeatureNameEnumEnumRuleCall_1_0(), semanticObject.getFeatureName());
@@ -353,8 +353,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_IsParentConstraintRule(ISerializationContext context, IsParent semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIsParentConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
@@ -381,8 +381,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_IsSourceTypeConstraintRule(ISerializationContext context, IsSourceType semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIsSourceTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
@@ -409,8 +409,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_IsTargetConstraintRule(ISerializationContext context, IsTarget semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
@@ -437,8 +437,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_IsTargetTypeConstraintRule(ISerializationContext context, IsTargetType semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIsTargetTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
@@ -475,8 +475,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_NotConstraintExpression(ISerializationContext context, NotConstraintRule semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.UNARY_CONSTRAINT_RULE__RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.UNARY_CONSTRAINT_RULE__RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.UNARY_CONSTRAINT_RULE__RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.UNARY_CONSTRAINT_RULE__RULE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getNotConstraintExpressionAccess().getRulePrimaryConstraintParserRuleCall_1_2_0(), semanticObject.getRule());
@@ -501,8 +501,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_NotFeatureExpression(ISerializationContext context, NotFeatureRule semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EditpolicymodelPackage.Literals.UNARY_FEATURE_RULE__RULE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EditpolicymodelPackage.Literals.UNARY_FEATURE_RULE__RULE));
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.UNARY_FEATURE_RULE__RULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.UNARY_FEATURE_RULE__RULE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getNotFeatureExpressionAccess().getRulePrimaryFeatureParserRuleCall_1_2_0(), semanticObject.getRule());
