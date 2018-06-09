@@ -622,7 +622,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstraintRule"
-    // InternalDsl.g:254:1: ruleConstraintRule returns [EObject current=null] : (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InCompartmentConstraintRule_9= ruleInCompartmentConstraintRule ) ;
+    // InternalDsl.g:254:1: ruleConstraintRule returns [EObject current=null] : (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InTypeConstraintRule_9= ruleInTypeConstraintRule ) ;
     public final EObject ruleConstraintRule() throws RecognitionException {
         EObject current = null;
 
@@ -644,17 +644,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
         EObject this_SourceEqualsTargetTypeConstraintRule_8 = null;
 
-        EObject this_InCompartmentConstraintRule_9 = null;
+        EObject this_InTypeConstraintRule_9 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDsl.g:260:2: ( (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InCompartmentConstraintRule_9= ruleInCompartmentConstraintRule ) )
-            // InternalDsl.g:261:2: (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InCompartmentConstraintRule_9= ruleInCompartmentConstraintRule )
+            // InternalDsl.g:260:2: ( (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InTypeConstraintRule_9= ruleInTypeConstraintRule ) )
+            // InternalDsl.g:261:2: (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InTypeConstraintRule_9= ruleInTypeConstraintRule )
             {
-            // InternalDsl.g:261:2: (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InCompartmentConstraintRule_9= ruleInCompartmentConstraintRule )
+            // InternalDsl.g:261:2: (this_TrueConstraintRule_0= ruleTrueConstraintRule | this_FalseConstraintRule_1= ruleFalseConstraintRule | this_ContainsCompartmentConstrainRule_2= ruleContainsCompartmentConstrainRule | this_IsTargetConstraintRule_3= ruleIsTargetConstraintRule | this_IsTargetTypeConstraintRule_4= ruleIsTargetTypeConstraintRule | this_IsSourceTypeConstraintRule_5= ruleIsSourceTypeConstraintRule | this_IsParentConstraintRule_6= ruleIsParentConstraintRule | this_SourceEqualsTargetConstraintRule_7= ruleSourceEqualsTargetConstraintRule | this_SourceEqualsTargetTypeConstraintRule_8= ruleSourceEqualsTargetTypeConstraintRule | this_InTypeConstraintRule_9= ruleInTypeConstraintRule )
             int alt4=10;
             switch ( input.LA(1) ) {
             case 24:
@@ -878,18 +878,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDsl.g:343:3: this_InCompartmentConstraintRule_9= ruleInCompartmentConstraintRule
+                    // InternalDsl.g:343:3: this_InTypeConstraintRule_9= ruleInTypeConstraintRule
                     {
 
-                    			newCompositeNode(grammarAccess.getConstraintRuleAccess().getInCompartmentConstraintRuleParserRuleCall_9());
+                    			newCompositeNode(grammarAccess.getConstraintRuleAccess().getInTypeConstraintRuleParserRuleCall_9());
                     		
                     pushFollow(FOLLOW_2);
-                    this_InCompartmentConstraintRule_9=ruleInCompartmentConstraintRule();
+                    this_InTypeConstraintRule_9=ruleInTypeConstraintRule();
 
                     state._fsp--;
 
 
-                    			current = this_InCompartmentConstraintRule_9;
+                    			current = this_InTypeConstraintRule_9;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -1549,25 +1549,25 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleIsTargetConstraintRule"
 
 
-    // $ANTLR start "entryRuleInCompartmentConstraintRule"
-    // InternalDsl.g:621:1: entryRuleInCompartmentConstraintRule returns [EObject current=null] : iv_ruleInCompartmentConstraintRule= ruleInCompartmentConstraintRule EOF ;
-    public final EObject entryRuleInCompartmentConstraintRule() throws RecognitionException {
+    // $ANTLR start "entryRuleInTypeConstraintRule"
+    // InternalDsl.g:621:1: entryRuleInTypeConstraintRule returns [EObject current=null] : iv_ruleInTypeConstraintRule= ruleInTypeConstraintRule EOF ;
+    public final EObject entryRuleInTypeConstraintRule() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleInCompartmentConstraintRule = null;
+        EObject iv_ruleInTypeConstraintRule = null;
 
 
         try {
-            // InternalDsl.g:621:68: (iv_ruleInCompartmentConstraintRule= ruleInCompartmentConstraintRule EOF )
-            // InternalDsl.g:622:2: iv_ruleInCompartmentConstraintRule= ruleInCompartmentConstraintRule EOF
+            // InternalDsl.g:621:61: (iv_ruleInTypeConstraintRule= ruleInTypeConstraintRule EOF )
+            // InternalDsl.g:622:2: iv_ruleInTypeConstraintRule= ruleInTypeConstraintRule EOF
             {
-             newCompositeNode(grammarAccess.getInCompartmentConstraintRuleRule()); 
+             newCompositeNode(grammarAccess.getInTypeConstraintRuleRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleInCompartmentConstraintRule=ruleInCompartmentConstraintRule();
+            iv_ruleInTypeConstraintRule=ruleInTypeConstraintRule();
 
             state._fsp--;
 
-             current =iv_ruleInCompartmentConstraintRule; 
+             current =iv_ruleInTypeConstraintRule; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1582,12 +1582,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleInCompartmentConstraintRule"
+    // $ANTLR end "entryRuleInTypeConstraintRule"
 
 
-    // $ANTLR start "ruleInCompartmentConstraintRule"
-    // InternalDsl.g:628:1: ruleInCompartmentConstraintRule returns [EObject current=null] : ( () otherlv_1= 'InCompartment' otherlv_2= '(' otherlv_3= ')' ) ;
-    public final EObject ruleInCompartmentConstraintRule() throws RecognitionException {
+    // $ANTLR start "ruleInTypeConstraintRule"
+    // InternalDsl.g:628:1: ruleInTypeConstraintRule returns [EObject current=null] : ( () otherlv_1= 'InCompartment' otherlv_2= '(' otherlv_3= ')' ) ;
+    public final EObject ruleInTypeConstraintRule() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
@@ -1609,7 +1609,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getInCompartmentConstraintRuleAccess().getInCompartmentAction_0(),
+            					grammarAccess.getInTypeConstraintRuleAccess().getInTypeAction_0(),
             					current);
             			
 
@@ -1617,15 +1617,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             otherlv_1=(Token)match(input,21,FOLLOW_6); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getInCompartmentConstraintRuleAccess().getInCompartmentKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getInTypeConstraintRuleAccess().getInCompartmentKeyword_1());
             		
             otherlv_2=(Token)match(input,12,FOLLOW_8); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getInCompartmentConstraintRuleAccess().getLeftParenthesisKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getInTypeConstraintRuleAccess().getLeftParenthesisKeyword_2());
             		
             otherlv_3=(Token)match(input,13,FOLLOW_2); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getInCompartmentConstraintRuleAccess().getRightParenthesisKeyword_3());
+            			newLeafNode(otherlv_3, grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_3());
             		
 
             }
@@ -1646,7 +1646,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleInCompartmentConstraintRule"
+    // $ANTLR end "ruleInTypeConstraintRule"
 
 
     // $ANTLR start "entryRuleSourceEqualsTargetConstraintRule"
