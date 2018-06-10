@@ -1044,45 +1044,47 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCompartmentTypeCompartmentTypeKeyword_1_0 = (Keyword)cCompartmentTypeEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cCyclicEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cCyclicCyclicKeyword_2_0 = (Keyword)cCyclicEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cDataTypeEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cDataTypeDataTypeKeyword_3_0 = (Keyword)cDataTypeEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cFulfillmentEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cFulfillmentFulfillmentKeyword_4_0 = (Keyword)cFulfillmentEnumLiteralDeclaration_4.eContents().get(0);
-		private final EnumLiteralDeclaration cInheritanceEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cInheritanceInheritanceKeyword_5_0 = (Keyword)cInheritanceEnumLiteralDeclaration_5.eContents().get(0);
-		private final EnumLiteralDeclaration cGroupEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
-		private final Keyword cGroupGroupKeyword_6_0 = (Keyword)cGroupEnumLiteralDeclaration_6.eContents().get(0);
-		private final EnumLiteralDeclaration cReflexiveEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
-		private final Keyword cReflexiveReflexiveKeyword_7_0 = (Keyword)cReflexiveEnumLiteralDeclaration_7.eContents().get(0);
-		private final EnumLiteralDeclaration cRelationshipEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
-		private final Keyword cRelationshipRelationshipKeyword_8_0 = (Keyword)cRelationshipEnumLiteralDeclaration_8.eContents().get(0);
-		private final EnumLiteralDeclaration cRelationshipExclusionEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
-		private final Keyword cRelationshipExclusionRelationshipExclusionKeyword_9_0 = (Keyword)cRelationshipExclusionEnumLiteralDeclaration_9.eContents().get(0);
-		private final EnumLiteralDeclaration cRelationshipImplicationEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
-		private final Keyword cRelationshipImplicationRelationshipImplicationKeyword_10_0 = (Keyword)cRelationshipImplicationEnumLiteralDeclaration_10.eContents().get(0);
-		private final EnumLiteralDeclaration cRoleTypeEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
-		private final Keyword cRoleTypeRoleTypeKeyword_11_0 = (Keyword)cRoleTypeEnumLiteralDeclaration_11.eContents().get(0);
-		private final EnumLiteralDeclaration cRoleEquivalenceEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
-		private final Keyword cRoleEquivalenceRoleEquivalenceKeyword_12_0 = (Keyword)cRoleEquivalenceEnumLiteralDeclaration_12.eContents().get(0);
-		private final EnumLiteralDeclaration cRoleGroupEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
-		private final Keyword cRoleGroupRoleGroupKeyword_13_0 = (Keyword)cRoleGroupEnumLiteralDeclaration_13.eContents().get(0);
-		private final EnumLiteralDeclaration cRoleImplicationEnumLiteralDeclaration_14 = (EnumLiteralDeclaration)cAlternatives.eContents().get(14);
-		private final Keyword cRoleImplicationRoleImplicationKeyword_14_0 = (Keyword)cRoleImplicationEnumLiteralDeclaration_14.eContents().get(0);
-		private final EnumLiteralDeclaration cRoleProhibitionEnumLiteralDeclaration_15 = (EnumLiteralDeclaration)cAlternatives.eContents().get(15);
-		private final Keyword cRoleProhibitionRoleProhibitionKeyword_15_0 = (Keyword)cRoleProhibitionEnumLiteralDeclaration_15.eContents().get(0);
-		private final EnumLiteralDeclaration cIrreflexiveEnumLiteralDeclaration_16 = (EnumLiteralDeclaration)cAlternatives.eContents().get(16);
-		private final Keyword cIrreflexiveIrreflexiveKeyword_16_0 = (Keyword)cIrreflexiveEnumLiteralDeclaration_16.eContents().get(0);
-		private final EnumLiteralDeclaration cNaturalTypeEnumLiteralDeclaration_17 = (EnumLiteralDeclaration)cAlternatives.eContents().get(17);
-		private final Keyword cNaturalTypeNaturalTypeKeyword_17_0 = (Keyword)cNaturalTypeEnumLiteralDeclaration_17.eContents().get(0);
+		private final EnumLiteralDeclaration cTotalEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cTotalTotalKeyword_3_0 = (Keyword)cTotalEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cDataTypeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cDataTypeDataTypeKeyword_4_0 = (Keyword)cDataTypeEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cFulfillmentEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cFulfillmentFulfillmentKeyword_5_0 = (Keyword)cFulfillmentEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cInheritanceEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cInheritanceInheritanceKeyword_6_0 = (Keyword)cInheritanceEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cGroupEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cGroupGroupKeyword_7_0 = (Keyword)cGroupEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cReflexiveEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cReflexiveReflexiveKeyword_8_0 = (Keyword)cReflexiveEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cRelationshipEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cRelationshipRelationshipKeyword_9_0 = (Keyword)cRelationshipEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cRelationshipExclusionEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cRelationshipExclusionRelationshipExclusionKeyword_10_0 = (Keyword)cRelationshipExclusionEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cRelationshipImplicationEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cRelationshipImplicationRelationshipImplicationKeyword_11_0 = (Keyword)cRelationshipImplicationEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cRoleTypeEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
+		private final Keyword cRoleTypeRoleTypeKeyword_12_0 = (Keyword)cRoleTypeEnumLiteralDeclaration_12.eContents().get(0);
+		private final EnumLiteralDeclaration cRoleEquivalenceEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
+		private final Keyword cRoleEquivalenceRoleEquivalenceKeyword_13_0 = (Keyword)cRoleEquivalenceEnumLiteralDeclaration_13.eContents().get(0);
+		private final EnumLiteralDeclaration cRoleGroupEnumLiteralDeclaration_14 = (EnumLiteralDeclaration)cAlternatives.eContents().get(14);
+		private final Keyword cRoleGroupRoleGroupKeyword_14_0 = (Keyword)cRoleGroupEnumLiteralDeclaration_14.eContents().get(0);
+		private final EnumLiteralDeclaration cRoleImplicationEnumLiteralDeclaration_15 = (EnumLiteralDeclaration)cAlternatives.eContents().get(15);
+		private final Keyword cRoleImplicationRoleImplicationKeyword_15_0 = (Keyword)cRoleImplicationEnumLiteralDeclaration_15.eContents().get(0);
+		private final EnumLiteralDeclaration cRoleProhibitionEnumLiteralDeclaration_16 = (EnumLiteralDeclaration)cAlternatives.eContents().get(16);
+		private final Keyword cRoleProhibitionRoleProhibitionKeyword_16_0 = (Keyword)cRoleProhibitionEnumLiteralDeclaration_16.eContents().get(0);
+		private final EnumLiteralDeclaration cIrreflexiveEnumLiteralDeclaration_17 = (EnumLiteralDeclaration)cAlternatives.eContents().get(17);
+		private final Keyword cIrreflexiveIrreflexiveKeyword_17_0 = (Keyword)cIrreflexiveEnumLiteralDeclaration_17.eContents().get(0);
+		private final EnumLiteralDeclaration cNaturalTypeEnumLiteralDeclaration_18 = (EnumLiteralDeclaration)cAlternatives.eContents().get(18);
+		private final Keyword cNaturalTypeNaturalTypeKeyword_18_0 = (Keyword)cNaturalTypeEnumLiteralDeclaration_18.eContents().get(0);
 		
 		//enum FeatureTypeEnum returns TypeEnum:
-		//	Acyclic | CompartmentType | Cyclic | DataType | Fulfillment | Inheritance |
+		//	Acyclic | CompartmentType | Cyclic | Total | DataType | Fulfillment | Inheritance |
 		//	Group | Reflexive | Relationship | RelationshipExclusion | RelationshipImplication |
 		//	RoleType | RoleEquivalence | RoleGroup | RoleImplication | RoleProhibition |
 		//	Irreflexive | NaturalType;
 		public EnumRule getRule() { return rule; }
 		
-		//Acyclic | CompartmentType | Cyclic | DataType | Fulfillment | Inheritance | Group | Reflexive | Relationship |
+		//Acyclic | CompartmentType | Cyclic | Total | DataType | Fulfillment | Inheritance | Group | Reflexive | Relationship |
 		//RelationshipExclusion | RelationshipImplication | RoleType | RoleEquivalence | RoleGroup | RoleImplication |
 		//RoleProhibition | Irreflexive | NaturalType
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -1105,95 +1107,101 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Cyclic"
 		public Keyword getCyclicCyclicKeyword_2_0() { return cCyclicCyclicKeyword_2_0; }
 		
+		//Total
+		public EnumLiteralDeclaration getTotalEnumLiteralDeclaration_3() { return cTotalEnumLiteralDeclaration_3; }
+		
+		//"Total"
+		public Keyword getTotalTotalKeyword_3_0() { return cTotalTotalKeyword_3_0; }
+		
 		//DataType
-		public EnumLiteralDeclaration getDataTypeEnumLiteralDeclaration_3() { return cDataTypeEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getDataTypeEnumLiteralDeclaration_4() { return cDataTypeEnumLiteralDeclaration_4; }
 		
 		//"DataType"
-		public Keyword getDataTypeDataTypeKeyword_3_0() { return cDataTypeDataTypeKeyword_3_0; }
+		public Keyword getDataTypeDataTypeKeyword_4_0() { return cDataTypeDataTypeKeyword_4_0; }
 		
 		//Fulfillment
-		public EnumLiteralDeclaration getFulfillmentEnumLiteralDeclaration_4() { return cFulfillmentEnumLiteralDeclaration_4; }
+		public EnumLiteralDeclaration getFulfillmentEnumLiteralDeclaration_5() { return cFulfillmentEnumLiteralDeclaration_5; }
 		
 		//"Fulfillment"
-		public Keyword getFulfillmentFulfillmentKeyword_4_0() { return cFulfillmentFulfillmentKeyword_4_0; }
+		public Keyword getFulfillmentFulfillmentKeyword_5_0() { return cFulfillmentFulfillmentKeyword_5_0; }
 		
 		//Inheritance
-		public EnumLiteralDeclaration getInheritanceEnumLiteralDeclaration_5() { return cInheritanceEnumLiteralDeclaration_5; }
+		public EnumLiteralDeclaration getInheritanceEnumLiteralDeclaration_6() { return cInheritanceEnumLiteralDeclaration_6; }
 		
 		//"Inheritance"
-		public Keyword getInheritanceInheritanceKeyword_5_0() { return cInheritanceInheritanceKeyword_5_0; }
+		public Keyword getInheritanceInheritanceKeyword_6_0() { return cInheritanceInheritanceKeyword_6_0; }
 		
 		//Group
-		public EnumLiteralDeclaration getGroupEnumLiteralDeclaration_6() { return cGroupEnumLiteralDeclaration_6; }
+		public EnumLiteralDeclaration getGroupEnumLiteralDeclaration_7() { return cGroupEnumLiteralDeclaration_7; }
 		
 		//"Group"
-		public Keyword getGroupGroupKeyword_6_0() { return cGroupGroupKeyword_6_0; }
+		public Keyword getGroupGroupKeyword_7_0() { return cGroupGroupKeyword_7_0; }
 		
 		//Reflexive
-		public EnumLiteralDeclaration getReflexiveEnumLiteralDeclaration_7() { return cReflexiveEnumLiteralDeclaration_7; }
+		public EnumLiteralDeclaration getReflexiveEnumLiteralDeclaration_8() { return cReflexiveEnumLiteralDeclaration_8; }
 		
 		//"Reflexive"
-		public Keyword getReflexiveReflexiveKeyword_7_0() { return cReflexiveReflexiveKeyword_7_0; }
+		public Keyword getReflexiveReflexiveKeyword_8_0() { return cReflexiveReflexiveKeyword_8_0; }
 		
 		//Relationship
-		public EnumLiteralDeclaration getRelationshipEnumLiteralDeclaration_8() { return cRelationshipEnumLiteralDeclaration_8; }
+		public EnumLiteralDeclaration getRelationshipEnumLiteralDeclaration_9() { return cRelationshipEnumLiteralDeclaration_9; }
 		
 		//"Relationship"
-		public Keyword getRelationshipRelationshipKeyword_8_0() { return cRelationshipRelationshipKeyword_8_0; }
+		public Keyword getRelationshipRelationshipKeyword_9_0() { return cRelationshipRelationshipKeyword_9_0; }
 		
 		//RelationshipExclusion
-		public EnumLiteralDeclaration getRelationshipExclusionEnumLiteralDeclaration_9() { return cRelationshipExclusionEnumLiteralDeclaration_9; }
+		public EnumLiteralDeclaration getRelationshipExclusionEnumLiteralDeclaration_10() { return cRelationshipExclusionEnumLiteralDeclaration_10; }
 		
 		//"RelationshipExclusion"
-		public Keyword getRelationshipExclusionRelationshipExclusionKeyword_9_0() { return cRelationshipExclusionRelationshipExclusionKeyword_9_0; }
+		public Keyword getRelationshipExclusionRelationshipExclusionKeyword_10_0() { return cRelationshipExclusionRelationshipExclusionKeyword_10_0; }
 		
 		//RelationshipImplication
-		public EnumLiteralDeclaration getRelationshipImplicationEnumLiteralDeclaration_10() { return cRelationshipImplicationEnumLiteralDeclaration_10; }
+		public EnumLiteralDeclaration getRelationshipImplicationEnumLiteralDeclaration_11() { return cRelationshipImplicationEnumLiteralDeclaration_11; }
 		
 		//"RelationshipImplication"
-		public Keyword getRelationshipImplicationRelationshipImplicationKeyword_10_0() { return cRelationshipImplicationRelationshipImplicationKeyword_10_0; }
+		public Keyword getRelationshipImplicationRelationshipImplicationKeyword_11_0() { return cRelationshipImplicationRelationshipImplicationKeyword_11_0; }
 		
 		//RoleType
-		public EnumLiteralDeclaration getRoleTypeEnumLiteralDeclaration_11() { return cRoleTypeEnumLiteralDeclaration_11; }
+		public EnumLiteralDeclaration getRoleTypeEnumLiteralDeclaration_12() { return cRoleTypeEnumLiteralDeclaration_12; }
 		
 		//"RoleType"
-		public Keyword getRoleTypeRoleTypeKeyword_11_0() { return cRoleTypeRoleTypeKeyword_11_0; }
+		public Keyword getRoleTypeRoleTypeKeyword_12_0() { return cRoleTypeRoleTypeKeyword_12_0; }
 		
 		//RoleEquivalence
-		public EnumLiteralDeclaration getRoleEquivalenceEnumLiteralDeclaration_12() { return cRoleEquivalenceEnumLiteralDeclaration_12; }
+		public EnumLiteralDeclaration getRoleEquivalenceEnumLiteralDeclaration_13() { return cRoleEquivalenceEnumLiteralDeclaration_13; }
 		
 		//"RoleEquivalence"
-		public Keyword getRoleEquivalenceRoleEquivalenceKeyword_12_0() { return cRoleEquivalenceRoleEquivalenceKeyword_12_0; }
+		public Keyword getRoleEquivalenceRoleEquivalenceKeyword_13_0() { return cRoleEquivalenceRoleEquivalenceKeyword_13_0; }
 		
 		//RoleGroup
-		public EnumLiteralDeclaration getRoleGroupEnumLiteralDeclaration_13() { return cRoleGroupEnumLiteralDeclaration_13; }
+		public EnumLiteralDeclaration getRoleGroupEnumLiteralDeclaration_14() { return cRoleGroupEnumLiteralDeclaration_14; }
 		
 		//"RoleGroup"
-		public Keyword getRoleGroupRoleGroupKeyword_13_0() { return cRoleGroupRoleGroupKeyword_13_0; }
+		public Keyword getRoleGroupRoleGroupKeyword_14_0() { return cRoleGroupRoleGroupKeyword_14_0; }
 		
 		//RoleImplication
-		public EnumLiteralDeclaration getRoleImplicationEnumLiteralDeclaration_14() { return cRoleImplicationEnumLiteralDeclaration_14; }
+		public EnumLiteralDeclaration getRoleImplicationEnumLiteralDeclaration_15() { return cRoleImplicationEnumLiteralDeclaration_15; }
 		
 		//"RoleImplication"
-		public Keyword getRoleImplicationRoleImplicationKeyword_14_0() { return cRoleImplicationRoleImplicationKeyword_14_0; }
+		public Keyword getRoleImplicationRoleImplicationKeyword_15_0() { return cRoleImplicationRoleImplicationKeyword_15_0; }
 		
 		//RoleProhibition
-		public EnumLiteralDeclaration getRoleProhibitionEnumLiteralDeclaration_15() { return cRoleProhibitionEnumLiteralDeclaration_15; }
+		public EnumLiteralDeclaration getRoleProhibitionEnumLiteralDeclaration_16() { return cRoleProhibitionEnumLiteralDeclaration_16; }
 		
 		//"RoleProhibition"
-		public Keyword getRoleProhibitionRoleProhibitionKeyword_15_0() { return cRoleProhibitionRoleProhibitionKeyword_15_0; }
+		public Keyword getRoleProhibitionRoleProhibitionKeyword_16_0() { return cRoleProhibitionRoleProhibitionKeyword_16_0; }
 		
 		//Irreflexive
-		public EnumLiteralDeclaration getIrreflexiveEnumLiteralDeclaration_16() { return cIrreflexiveEnumLiteralDeclaration_16; }
+		public EnumLiteralDeclaration getIrreflexiveEnumLiteralDeclaration_17() { return cIrreflexiveEnumLiteralDeclaration_17; }
 		
 		//"Irreflexive"
-		public Keyword getIrreflexiveIrreflexiveKeyword_16_0() { return cIrreflexiveIrreflexiveKeyword_16_0; }
+		public Keyword getIrreflexiveIrreflexiveKeyword_17_0() { return cIrreflexiveIrreflexiveKeyword_17_0; }
 		
 		//NaturalType
-		public EnumLiteralDeclaration getNaturalTypeEnumLiteralDeclaration_17() { return cNaturalTypeEnumLiteralDeclaration_17; }
+		public EnumLiteralDeclaration getNaturalTypeEnumLiteralDeclaration_18() { return cNaturalTypeEnumLiteralDeclaration_18; }
 		
 		//"NaturalType"
-		public Keyword getNaturalTypeNaturalTypeKeyword_17_0() { return cNaturalTypeNaturalTypeKeyword_17_0; }
+		public Keyword getNaturalTypeNaturalTypeKeyword_18_0() { return cNaturalTypeNaturalTypeKeyword_18_0; }
 	}
 	public class FeatureNameEnumElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.FeatureNameEnum");
@@ -1657,7 +1665,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum FeatureTypeEnum returns TypeEnum:
-	//	Acyclic | CompartmentType | Cyclic | DataType | Fulfillment | Inheritance |
+	//	Acyclic | CompartmentType | Cyclic | Total | DataType | Fulfillment | Inheritance |
 	//	Group | Reflexive | Relationship | RelationshipExclusion | RelationshipImplication |
 	//	RoleType | RoleEquivalence | RoleGroup | RoleImplication | RoleProhibition |
 	//	Irreflexive | NaturalType;

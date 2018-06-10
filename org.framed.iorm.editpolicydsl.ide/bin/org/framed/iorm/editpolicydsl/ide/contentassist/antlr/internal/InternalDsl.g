@@ -1070,93 +1070,99 @@ rule__FeatureTypeEnum__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_3()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getTotalEnumLiteralDeclaration_3()); }
+		('Total')
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getTotalEnumLiteralDeclaration_3()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_4()); }
 		('DataType')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_3()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_4()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_4()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_5()); }
 		('Fulfillment')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_4()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_5()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_5()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_6()); }
 		('Inheritance')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_5()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_6()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_6()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_7()); }
 		('Group')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_6()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_7()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_7()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_8()); }
 		('Reflexive')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_7()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_8()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_8()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_9()); }
 		('Relationship')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_8()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_9()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_9()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_10()); }
 		('RelationshipExclusion')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_9()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_10()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_10()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_11()); }
 		('RelationshipImplication')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_10()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_11()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_11()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_12()); }
 		('RoleType')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_11()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_12()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_12()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_13()); }
 		('RoleEquivalence')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_12()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_13()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_13()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_14()); }
 		('RoleGroup')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_13()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_14()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_14()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_15()); }
 		('RoleImplication')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_14()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_15()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_15()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_16()); }
 		('RoleProhibition')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_15()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_16()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_16()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_17()); }
 		('Irreflexive')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_16()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_17()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_17()); }
+		{ before(grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_18()); }
 		('NaturalType')
-		{ after(grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_17()); }
+		{ after(grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_18()); }
 	)
 ;
 finally {

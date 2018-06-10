@@ -1623,122 +1623,130 @@ ruleFeatureTypeEnum returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_3='DataType'
+			enumLiteral_3='Total'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_3());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getTotalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getFeatureTypeEnumAccess().getTotalEnumLiteralDeclaration_3());
 			}
 		)
 		    |
 		(
-			enumLiteral_4='Fulfillment'
+			enumLiteral_4='DataType'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_4, grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_4());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getFeatureTypeEnumAccess().getDataTypeEnumLiteralDeclaration_4());
 			}
 		)
 		    |
 		(
-			enumLiteral_5='Inheritance'
+			enumLiteral_5='Fulfillment'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_5, grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_5());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getFeatureTypeEnumAccess().getFulfillmentEnumLiteralDeclaration_5());
 			}
 		)
 		    |
 		(
-			enumLiteral_6='Group'
+			enumLiteral_6='Inheritance'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_6, grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_6());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_6, grammarAccess.getFeatureTypeEnumAccess().getInheritanceEnumLiteralDeclaration_6());
 			}
 		)
 		    |
 		(
-			enumLiteral_7='Reflexive'
+			enumLiteral_7='Group'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_7, grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_7());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_7, grammarAccess.getFeatureTypeEnumAccess().getGroupEnumLiteralDeclaration_7());
 			}
 		)
 		    |
 		(
-			enumLiteral_8='Relationship'
+			enumLiteral_8='Reflexive'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_8, grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_8());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_8, grammarAccess.getFeatureTypeEnumAccess().getReflexiveEnumLiteralDeclaration_8());
 			}
 		)
 		    |
 		(
-			enumLiteral_9='RelationshipExclusion'
+			enumLiteral_9='Relationship'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_9, grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_9());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_9, grammarAccess.getFeatureTypeEnumAccess().getRelationshipEnumLiteralDeclaration_9());
 			}
 		)
 		    |
 		(
-			enumLiteral_10='RelationshipImplication'
+			enumLiteral_10='RelationshipExclusion'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_10, grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_10());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_10, grammarAccess.getFeatureTypeEnumAccess().getRelationshipExclusionEnumLiteralDeclaration_10());
 			}
 		)
 		    |
 		(
-			enumLiteral_11='RoleType'
+			enumLiteral_11='RelationshipImplication'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_11, grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_11());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_11, grammarAccess.getFeatureTypeEnumAccess().getRelationshipImplicationEnumLiteralDeclaration_11());
 			}
 		)
 		    |
 		(
-			enumLiteral_12='RoleEquivalence'
+			enumLiteral_12='RoleType'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_12, grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_12());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_12, grammarAccess.getFeatureTypeEnumAccess().getRoleTypeEnumLiteralDeclaration_12());
 			}
 		)
 		    |
 		(
-			enumLiteral_13='RoleGroup'
+			enumLiteral_13='RoleEquivalence'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_13, grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_13());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_13, grammarAccess.getFeatureTypeEnumAccess().getRoleEquivalenceEnumLiteralDeclaration_13());
 			}
 		)
 		    |
 		(
-			enumLiteral_14='RoleImplication'
+			enumLiteral_14='RoleGroup'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_14, grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_14());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_14, grammarAccess.getFeatureTypeEnumAccess().getRoleGroupEnumLiteralDeclaration_14());
 			}
 		)
 		    |
 		(
-			enumLiteral_15='RoleProhibition'
+			enumLiteral_15='RoleImplication'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_15, grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_15());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_15, grammarAccess.getFeatureTypeEnumAccess().getRoleImplicationEnumLiteralDeclaration_15());
 			}
 		)
 		    |
 		(
-			enumLiteral_16='Irreflexive'
+			enumLiteral_16='RoleProhibition'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_16, grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_16());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_16, grammarAccess.getFeatureTypeEnumAccess().getRoleProhibitionEnumLiteralDeclaration_16());
 			}
 		)
 		    |
 		(
-			enumLiteral_17='NaturalType'
+			enumLiteral_17='Irreflexive'
 			{
-				$current = grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_17, grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_17());
+				$current = grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_17, grammarAccess.getFeatureTypeEnumAccess().getIrreflexiveEnumLiteralDeclaration_17());
+			}
+		)
+		    |
+		(
+			enumLiteral_18='NaturalType'
+			{
+				$current = grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_18, grammarAccess.getFeatureTypeEnumAccess().getNaturalTypeEnumLiteralDeclaration_18());
 			}
 		)
 	)
