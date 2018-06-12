@@ -83,6 +83,7 @@ public class DslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIsParentConstraintRuleAccess().getTypeAssignment_3(), "rule__IsParentConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getIsSourceTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__IsSourceTypeConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getIsTargetConstraintRuleAccess().getTypeAssignment_3(), "rule__IsTargetConstraintRule__TypeAssignment_3");
+					put(grammarAccess.getInTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__InTypeConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getIsFeatureAccess().getFeatureNameAssignment_1(), "rule__IsFeature__FeatureNameAssignment_1");
 					put(grammarAccess.getImplicationFeatureAccess().getRightRuleAssignment_1_2(), "rule__ImplicationFeature__RightRuleAssignment_1_2");
 					put(grammarAccess.getOrFeatureAccess().getRulesAssignment_1_2(), "rule__OrFeature__RulesAssignment_1_2");

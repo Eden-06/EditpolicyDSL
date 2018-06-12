@@ -2390,9 +2390,9 @@ rule__InTypeConstraintRule__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getInTypeConstraintRuleAccess().getInCompartmentKeyword_1()); }
-	'InCompartment'
-	{ after(grammarAccess.getInTypeConstraintRuleAccess().getInCompartmentKeyword_1()); }
+	{ before(grammarAccess.getInTypeConstraintRuleAccess().getInTypeKeyword_1()); }
+	'InType'
+	{ after(grammarAccess.getInTypeConstraintRuleAccess().getInTypeKeyword_1()); }
 )
 ;
 finally {
@@ -2432,6 +2432,7 @@ rule__InTypeConstraintRule__Group__3
 	}
 :
 	rule__InTypeConstraintRule__Group__3__Impl
+	rule__InTypeConstraintRule__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2443,9 +2444,35 @@ rule__InTypeConstraintRule__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_3()); }
+	{ before(grammarAccess.getInTypeConstraintRuleAccess().getTypeAssignment_3()); }
+	(rule__InTypeConstraintRule__TypeAssignment_3)
+	{ after(grammarAccess.getInTypeConstraintRuleAccess().getTypeAssignment_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__InTypeConstraintRule__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__InTypeConstraintRule__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__InTypeConstraintRule__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 	')'
-	{ after(grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_3()); }
+	{ after(grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 )
 ;
 finally {
@@ -4101,6 +4128,21 @@ rule__IsTargetConstraintRule__TypeAssignment_3
 		{ before(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 		ruleFeatureTypeEnum
 		{ after(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__InTypeConstraintRule__TypeAssignment_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getInTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+		ruleFeatureTypeEnum
+		{ after(grammarAccess.getInTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 	)
 ;
 finally {

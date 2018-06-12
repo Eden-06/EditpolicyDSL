@@ -57,7 +57,7 @@ IsTargetConstraintRule returns IsTarget:
 	{IsTarget} 'IsTarget' '(' type=FeatureTypeEnum ')';
 	
 InTypeConstraintRule returns InType:
-	{InType} 'InCompartment' '(' ')';	
+	{InType} 'InType' '(' type=FeatureTypeEnum ')';	
 
 SourceEqualsTargetConstraintRule returns SourceEqualsTarget:
 	{SourceEqualsTarget} 'SourceEqualsTarget' '(' ')';

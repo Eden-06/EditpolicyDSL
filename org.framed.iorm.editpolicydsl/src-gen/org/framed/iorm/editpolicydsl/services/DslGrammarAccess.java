@@ -351,28 +351,36 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.InTypeConstraintRule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInTypeAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cInCompartmentKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cInTypeKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeFeatureTypeEnumEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//InTypeConstraintRule InType:
-		//	{InType} 'InCompartment' '(' ')';
+		//	{InType} 'InType' '(' type=FeatureTypeEnum ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{InType} 'InCompartment' '(' ')'
+		//{InType} 'InType' '(' type=FeatureTypeEnum ')'
 		public Group getGroup() { return cGroup; }
 		
 		//{InType}
 		public Action getInTypeAction_0() { return cInTypeAction_0; }
 		
-		//'InCompartment'
-		public Keyword getInCompartmentKeyword_1() { return cInCompartmentKeyword_1; }
+		//'InType'
+		public Keyword getInTypeKeyword_1() { return cInTypeKeyword_1; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
+		//type=FeatureTypeEnum
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		
+		//FeatureTypeEnum
+		public RuleCall getTypeFeatureTypeEnumEnumRuleCall_3_0() { return cTypeFeatureTypeEnumEnumRuleCall_3_0; }
+		
 		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class SourceEqualsTargetConstraintRuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.SourceEqualsTargetConstraintRule");
@@ -1759,7 +1767,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//InTypeConstraintRule InType:
-	//	{InType} 'InCompartment' '(' ')';
+	//	{InType} 'InType' '(' type=FeatureTypeEnum ')';
 	public InTypeConstraintRuleElements getInTypeConstraintRuleAccess() {
 		return pInTypeConstraintRule;
 	}

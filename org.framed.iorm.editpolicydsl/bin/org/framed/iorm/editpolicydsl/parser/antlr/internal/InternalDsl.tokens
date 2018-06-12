@@ -30,7 +30,7 @@
 'Fulfillment'=45
 'Group'=47
 'Group_Constraints'=70
-'InCompartment'=21
+'InType'=21
 'Inheritance'=46
 'Inter_Relationship_Constraints'=71
 'Intra_Relationship_Constraints'=72

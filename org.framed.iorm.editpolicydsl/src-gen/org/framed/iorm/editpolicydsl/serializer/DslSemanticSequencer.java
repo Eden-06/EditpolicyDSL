@@ -299,10 +299,16 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     PrimaryConstraint returns InType
 	 *
 	 * Constraint:
-	 *     {InType}
+	 *     type=FeatureTypeEnum
 	 */
 	protected void sequence_InTypeConstraintRule(ISerializationContext context, InType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getInTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	

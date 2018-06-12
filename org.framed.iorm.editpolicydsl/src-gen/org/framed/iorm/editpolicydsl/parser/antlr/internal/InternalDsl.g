@@ -640,17 +640,36 @@ ruleInTypeConstraintRule returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='InCompartment'
+		otherlv_1='InType'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getInTypeConstraintRuleAccess().getInCompartmentKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getInTypeConstraintRuleAccess().getInTypeKeyword_1());
 		}
 		otherlv_2='('
 		{
 			newLeafNode(otherlv_2, grammarAccess.getInTypeConstraintRuleAccess().getLeftParenthesisKeyword_2());
 		}
-		otherlv_3=')'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getInTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0());
+				}
+				lv_type_3_0=ruleFeatureTypeEnum
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getInTypeConstraintRuleRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_3_0,
+						"org.framed.iorm.editpolicydsl.Dsl.FeatureTypeEnum");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=')'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getInTypeConstraintRuleAccess().getRightParenthesisKeyword_4());
 		}
 	)
 ;
