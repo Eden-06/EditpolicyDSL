@@ -1,5 +1,6 @@
 # EditpolicyDSL
-### A DSL for the simple creation of editpolicy models for the FRaMED 2.0 software product line.
+
+A DSL for the simple creation of editpolicy models for the FRaMED 2.0 software product line.
 
 Based on the EditpolicyModel used in [FRaMED 2.0](https://github.com/Eden-06/FRaMED-2.0).
 
