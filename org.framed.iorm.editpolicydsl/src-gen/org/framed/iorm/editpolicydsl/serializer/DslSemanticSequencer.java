@@ -6,16 +6,15 @@ package org.framed.iorm.editpolicydsl.serializer;
 import com.google.inject.Inject;
 import editpolicymodel.AndConstraintRule;
 import editpolicymodel.AndFeatureRule;
-import editpolicymodel.ContainsCompartment;
+import editpolicymodel.ContainsType;
 import editpolicymodel.FalseConstraintRule;
 import editpolicymodel.FalseFeatureRule;
 import editpolicymodel.ImplicationConstraintRule;
 import editpolicymodel.ImplicationFeatureRule;
 import editpolicymodel.InType;
 import editpolicymodel.IsFeature;
-import editpolicymodel.IsParent;
 import editpolicymodel.IsSourceType;
-import editpolicymodel.IsTarget;
+import editpolicymodel.IsTargetConnectionType;
 import editpolicymodel.IsTargetType;
 import editpolicymodel.Model;
 import editpolicymodel.NotConstraintRule;
@@ -60,8 +59,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case editpolicymodelPackage.AND_FEATURE_RULE:
 				sequence_AndFeature(context, (AndFeatureRule) semanticObject); 
 				return; 
-			case editpolicymodelPackage.CONTAINS_COMPARTMENT:
-				sequence_ContainsCompartmentConstrainRule(context, (ContainsCompartment) semanticObject); 
+			case editpolicymodelPackage.CONTAINS_TYPE:
+				sequence_ContainsTypeConstrainRule(context, (ContainsType) semanticObject); 
 				return; 
 			case editpolicymodelPackage.FALSE_CONSTRAINT_RULE:
 				sequence_FalseConstraintRule(context, (FalseConstraintRule) semanticObject); 
@@ -81,14 +80,11 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case editpolicymodelPackage.IS_FEATURE:
 				sequence_IsFeature(context, (IsFeature) semanticObject); 
 				return; 
-			case editpolicymodelPackage.IS_PARENT:
-				sequence_IsParentConstraintRule(context, (IsParent) semanticObject); 
-				return; 
 			case editpolicymodelPackage.IS_SOURCE_TYPE:
 				sequence_IsSourceTypeConstraintRule(context, (IsSourceType) semanticObject); 
 				return; 
-			case editpolicymodelPackage.IS_TARGET:
-				sequence_IsTargetConstraintRule(context, (IsTarget) semanticObject); 
+			case editpolicymodelPackage.IS_TARGET_CONNECTION_TYPE:
+				sequence_IsTargetConnectionTypeConstraintRule(context, (IsTargetConnectionType) semanticObject); 
 				return; 
 			case editpolicymodelPackage.IS_TARGET_TYPE:
 				sequence_IsTargetTypeConstraintRule(context, (IsTargetType) semanticObject); 
@@ -170,23 +166,29 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     ConstraintRule returns ContainsCompartment
-	 *     ContainsCompartmentConstrainRule returns ContainsCompartment
-	 *     ConstraintExpression returns ContainsCompartment
-	 *     ImplicationConstraint returns ContainsCompartment
-	 *     ImplicationConstraint.ImplicationConstraintRule_1_0 returns ContainsCompartment
-	 *     OrConstraint returns ContainsCompartment
-	 *     OrConstraint.OrConstraintRule_1_0 returns ContainsCompartment
-	 *     AndConstraint returns ContainsCompartment
-	 *     AndConstraint.AndConstraintRule_1_0 returns ContainsCompartment
-	 *     NotConstraintExpression returns ContainsCompartment
-	 *     PrimaryConstraint returns ContainsCompartment
+	 *     ConstraintRule returns ContainsType
+	 *     ContainsTypeConstrainRule returns ContainsType
+	 *     ConstraintExpression returns ContainsType
+	 *     ImplicationConstraint returns ContainsType
+	 *     ImplicationConstraint.ImplicationConstraintRule_1_0 returns ContainsType
+	 *     OrConstraint returns ContainsType
+	 *     OrConstraint.OrConstraintRule_1_0 returns ContainsType
+	 *     AndConstraint returns ContainsType
+	 *     AndConstraint.AndConstraintRule_1_0 returns ContainsType
+	 *     NotConstraintExpression returns ContainsType
+	 *     PrimaryConstraint returns ContainsType
 	 *
 	 * Constraint:
-	 *     {ContainsCompartment}
+	 *     type=FeatureTypeEnum
 	 */
-	protected void sequence_ContainsCompartmentConstrainRule(ISerializationContext context, ContainsCompartment semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_ContainsTypeConstrainRule(ISerializationContext context, ContainsType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	
@@ -342,34 +344,6 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     ConstraintRule returns IsParent
-	 *     IsParentConstraintRule returns IsParent
-	 *     ConstraintExpression returns IsParent
-	 *     ImplicationConstraint returns IsParent
-	 *     ImplicationConstraint.ImplicationConstraintRule_1_0 returns IsParent
-	 *     OrConstraint returns IsParent
-	 *     OrConstraint.OrConstraintRule_1_0 returns IsParent
-	 *     AndConstraint returns IsParent
-	 *     AndConstraint.AndConstraintRule_1_0 returns IsParent
-	 *     NotConstraintExpression returns IsParent
-	 *     PrimaryConstraint returns IsParent
-	 *
-	 * Constraint:
-	 *     type=FeatureTypeEnum
-	 */
-	protected void sequence_IsParentConstraintRule(ISerializationContext context, IsParent semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIsParentConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     ConstraintRule returns IsSourceType
 	 *     IsSourceTypeConstraintRule returns IsSourceType
 	 *     ConstraintExpression returns IsSourceType
@@ -398,28 +372,28 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     ConstraintRule returns IsTarget
-	 *     IsTargetConstraintRule returns IsTarget
-	 *     ConstraintExpression returns IsTarget
-	 *     ImplicationConstraint returns IsTarget
-	 *     ImplicationConstraint.ImplicationConstraintRule_1_0 returns IsTarget
-	 *     OrConstraint returns IsTarget
-	 *     OrConstraint.OrConstraintRule_1_0 returns IsTarget
-	 *     AndConstraint returns IsTarget
-	 *     AndConstraint.AndConstraintRule_1_0 returns IsTarget
-	 *     NotConstraintExpression returns IsTarget
-	 *     PrimaryConstraint returns IsTarget
+	 *     ConstraintRule returns IsTargetConnectionType
+	 *     IsTargetConnectionTypeConstraintRule returns IsTargetConnectionType
+	 *     ConstraintExpression returns IsTargetConnectionType
+	 *     ImplicationConstraint returns IsTargetConnectionType
+	 *     ImplicationConstraint.ImplicationConstraintRule_1_0 returns IsTargetConnectionType
+	 *     OrConstraint returns IsTargetConnectionType
+	 *     OrConstraint.OrConstraintRule_1_0 returns IsTargetConnectionType
+	 *     AndConstraint returns IsTargetConnectionType
+	 *     AndConstraint.AndConstraintRule_1_0 returns IsTargetConnectionType
+	 *     NotConstraintExpression returns IsTargetConnectionType
+	 *     PrimaryConstraint returns IsTargetConnectionType
 	 *
 	 * Constraint:
 	 *     type=FeatureTypeEnum
 	 */
-	protected void sequence_IsTargetConstraintRule(ISerializationContext context, IsTarget semanticObject) {
+	protected void sequence_IsTargetConnectionTypeConstraintRule(ISerializationContext context, IsTargetConnectionType semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, editpolicymodelPackage.Literals.TYPE_ARGUMENT_RULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	

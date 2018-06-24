@@ -124,25 +124,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleContainsCompartmentConstrainRule
-entryRuleContainsCompartmentConstrainRule
+// Entry rule entryRuleContainsTypeConstrainRule
+entryRuleContainsTypeConstrainRule
 :
-{ before(grammarAccess.getContainsCompartmentConstrainRuleRule()); }
-	 ruleContainsCompartmentConstrainRule
-{ after(grammarAccess.getContainsCompartmentConstrainRuleRule()); } 
+{ before(grammarAccess.getContainsTypeConstrainRuleRule()); }
+	 ruleContainsTypeConstrainRule
+{ after(grammarAccess.getContainsTypeConstrainRuleRule()); } 
 	 EOF 
 ;
 
-// Rule ContainsCompartmentConstrainRule
-ruleContainsCompartmentConstrainRule 
+// Rule ContainsTypeConstrainRule
+ruleContainsTypeConstrainRule 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getContainsCompartmentConstrainRuleAccess().getGroup()); }
-		(rule__ContainsCompartmentConstrainRule__Group__0)
-		{ after(grammarAccess.getContainsCompartmentConstrainRuleAccess().getGroup()); }
+		{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getGroup()); }
+		(rule__ContainsTypeConstrainRule__Group__0)
+		{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getGroup()); }
 	)
 ;
 finally {
@@ -174,25 +174,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleIsParentConstraintRule
-entryRuleIsParentConstraintRule
+// Entry rule entryRuleIsTargetConnectionTypeConstraintRule
+entryRuleIsTargetConnectionTypeConstraintRule
 :
-{ before(grammarAccess.getIsParentConstraintRuleRule()); }
-	 ruleIsParentConstraintRule
-{ after(grammarAccess.getIsParentConstraintRuleRule()); } 
+{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleRule()); }
+	 ruleIsTargetConnectionTypeConstraintRule
+{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleRule()); } 
 	 EOF 
 ;
 
-// Rule IsParentConstraintRule
-ruleIsParentConstraintRule 
+// Rule IsTargetConnectionTypeConstraintRule
+ruleIsTargetConnectionTypeConstraintRule 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getIsParentConstraintRuleAccess().getGroup()); }
-		(rule__IsParentConstraintRule__Group__0)
-		{ after(grammarAccess.getIsParentConstraintRuleAccess().getGroup()); }
+		{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getGroup()); }
+		(rule__IsTargetConnectionTypeConstraintRule__Group__0)
+		{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getGroup()); }
 	)
 ;
 finally {
@@ -218,31 +218,6 @@ ruleIsSourceTypeConstraintRule
 		{ before(grammarAccess.getIsSourceTypeConstraintRuleAccess().getGroup()); }
 		(rule__IsSourceTypeConstraintRule__Group__0)
 		{ after(grammarAccess.getIsSourceTypeConstraintRuleAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleIsTargetConstraintRule
-entryRuleIsTargetConstraintRule
-:
-{ before(grammarAccess.getIsTargetConstraintRuleRule()); }
-	 ruleIsTargetConstraintRule
-{ after(grammarAccess.getIsTargetConstraintRuleRule()); } 
-	 EOF 
-;
-
-// Rule IsTargetConstraintRule
-ruleIsTargetConstraintRule 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getIsTargetConstraintRuleAccess().getGroup()); }
-		(rule__IsTargetConstraintRule__Group__0)
-		{ after(grammarAccess.getIsTargetConstraintRuleAccess().getGroup()); }
 	)
 ;
 finally {
@@ -815,15 +790,15 @@ rule__ConstraintRule__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getConstraintRuleAccess().getContainsCompartmentConstrainRuleParserRuleCall_2()); }
-		ruleContainsCompartmentConstrainRule
-		{ after(grammarAccess.getConstraintRuleAccess().getContainsCompartmentConstrainRuleParserRuleCall_2()); }
+		{ before(grammarAccess.getConstraintRuleAccess().getContainsTypeConstrainRuleParserRuleCall_2()); }
+		ruleContainsTypeConstrainRule
+		{ after(grammarAccess.getConstraintRuleAccess().getContainsTypeConstrainRuleParserRuleCall_2()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getConstraintRuleAccess().getIsTargetConstraintRuleParserRuleCall_3()); }
-		ruleIsTargetConstraintRule
-		{ after(grammarAccess.getConstraintRuleAccess().getIsTargetConstraintRuleParserRuleCall_3()); }
+		{ before(grammarAccess.getConstraintRuleAccess().getIsTargetConnectionTypeConstraintRuleParserRuleCall_3()); }
+		ruleIsTargetConnectionTypeConstraintRule
+		{ after(grammarAccess.getConstraintRuleAccess().getIsTargetConnectionTypeConstraintRuleParserRuleCall_3()); }
 	)
 	|
 	(
@@ -839,27 +814,21 @@ rule__ConstraintRule__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getConstraintRuleAccess().getIsParentConstraintRuleParserRuleCall_6()); }
-		ruleIsParentConstraintRule
-		{ after(grammarAccess.getConstraintRuleAccess().getIsParentConstraintRuleParserRuleCall_6()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetConstraintRuleParserRuleCall_7()); }
+		{ before(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetConstraintRuleParserRuleCall_6()); }
 		ruleSourceEqualsTargetConstraintRule
-		{ after(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetConstraintRuleParserRuleCall_7()); }
+		{ after(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetConstraintRuleParserRuleCall_6()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetTypeConstraintRuleParserRuleCall_8()); }
+		{ before(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetTypeConstraintRuleParserRuleCall_7()); }
 		ruleSourceEqualsTargetTypeConstraintRule
-		{ after(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetTypeConstraintRuleParserRuleCall_8()); }
+		{ after(grammarAccess.getConstraintRuleAccess().getSourceEqualsTargetTypeConstraintRuleParserRuleCall_7()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getConstraintRuleAccess().getInTypeConstraintRuleParserRuleCall_9()); }
+		{ before(grammarAccess.getConstraintRuleAccess().getInTypeConstraintRuleParserRuleCall_8()); }
 		ruleInTypeConstraintRule
-		{ after(grammarAccess.getConstraintRuleAccess().getInTypeConstraintRuleParserRuleCall_9()); }
+		{ after(grammarAccess.getConstraintRuleAccess().getInTypeConstraintRuleParserRuleCall_8()); }
 	)
 ;
 finally {
@@ -1697,107 +1666,134 @@ finally {
 }
 
 
-rule__ContainsCompartmentConstrainRule__Group__0
+rule__ContainsTypeConstrainRule__Group__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__ContainsCompartmentConstrainRule__Group__0__Impl
-	rule__ContainsCompartmentConstrainRule__Group__1
+	rule__ContainsTypeConstrainRule__Group__0__Impl
+	rule__ContainsTypeConstrainRule__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__0__Impl
+rule__ContainsTypeConstrainRule__Group__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getContainsCompartmentConstrainRuleAccess().getContainsCompartmentAction_0()); }
+	{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getContainsTypeAction_0()); }
 	()
-	{ after(grammarAccess.getContainsCompartmentConstrainRuleAccess().getContainsCompartmentAction_0()); }
+	{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getContainsTypeAction_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__1
+rule__ContainsTypeConstrainRule__Group__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__ContainsCompartmentConstrainRule__Group__1__Impl
-	rule__ContainsCompartmentConstrainRule__Group__2
+	rule__ContainsTypeConstrainRule__Group__1__Impl
+	rule__ContainsTypeConstrainRule__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__1__Impl
+rule__ContainsTypeConstrainRule__Group__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getContainsCompartmentConstrainRuleAccess().getContainsCompartmentKeyword_1()); }
-	'ContainsCompartment'
-	{ after(grammarAccess.getContainsCompartmentConstrainRuleAccess().getContainsCompartmentKeyword_1()); }
+	{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getContainsTypeKeyword_1()); }
+	'ContainsType'
+	{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getContainsTypeKeyword_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__2
+rule__ContainsTypeConstrainRule__Group__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__ContainsCompartmentConstrainRule__Group__2__Impl
-	rule__ContainsCompartmentConstrainRule__Group__3
+	rule__ContainsTypeConstrainRule__Group__2__Impl
+	rule__ContainsTypeConstrainRule__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__2__Impl
+rule__ContainsTypeConstrainRule__Group__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getContainsCompartmentConstrainRuleAccess().getLeftParenthesisKeyword_2()); }
+	{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getLeftParenthesisKeyword_2()); }
 	'('
-	{ after(grammarAccess.getContainsCompartmentConstrainRuleAccess().getLeftParenthesisKeyword_2()); }
+	{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getLeftParenthesisKeyword_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__3
+rule__ContainsTypeConstrainRule__Group__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__ContainsCompartmentConstrainRule__Group__3__Impl
+	rule__ContainsTypeConstrainRule__Group__3__Impl
+	rule__ContainsTypeConstrainRule__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContainsCompartmentConstrainRule__Group__3__Impl
+rule__ContainsTypeConstrainRule__Group__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getContainsCompartmentConstrainRuleAccess().getRightParenthesisKeyword_3()); }
+	{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeAssignment_3()); }
+	(rule__ContainsTypeConstrainRule__TypeAssignment_3)
+	{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeAssignment_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ContainsTypeConstrainRule__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__ContainsTypeConstrainRule__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ContainsTypeConstrainRule__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getRightParenthesisKeyword_4()); }
 	')'
-	{ after(grammarAccess.getContainsCompartmentConstrainRuleAccess().getRightParenthesisKeyword_3()); }
+	{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getRightParenthesisKeyword_4()); }
 )
 ;
 finally {
@@ -1940,134 +1936,134 @@ finally {
 }
 
 
-rule__IsParentConstraintRule__Group__0
+rule__IsTargetConnectionTypeConstraintRule__Group__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__IsParentConstraintRule__Group__0__Impl
-	rule__IsParentConstraintRule__Group__1
+	rule__IsTargetConnectionTypeConstraintRule__Group__0__Impl
+	rule__IsTargetConnectionTypeConstraintRule__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__0__Impl
+rule__IsTargetConnectionTypeConstraintRule__Group__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getIsParentConstraintRuleAccess().getIsParentAction_0()); }
+	{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getIsTargetConnectionTypeAction_0()); }
 	()
-	{ after(grammarAccess.getIsParentConstraintRuleAccess().getIsParentAction_0()); }
+	{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getIsTargetConnectionTypeAction_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__1
+rule__IsTargetConnectionTypeConstraintRule__Group__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__IsParentConstraintRule__Group__1__Impl
-	rule__IsParentConstraintRule__Group__2
+	rule__IsTargetConnectionTypeConstraintRule__Group__1__Impl
+	rule__IsTargetConnectionTypeConstraintRule__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__1__Impl
+rule__IsTargetConnectionTypeConstraintRule__Group__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getIsParentConstraintRuleAccess().getIsParentKeyword_1()); }
-	'IsParent'
-	{ after(grammarAccess.getIsParentConstraintRuleAccess().getIsParentKeyword_1()); }
+	{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getIsTargetConnectionTypeKeyword_1()); }
+	'IsTargetConnectionType'
+	{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getIsTargetConnectionTypeKeyword_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__2
+rule__IsTargetConnectionTypeConstraintRule__Group__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__IsParentConstraintRule__Group__2__Impl
-	rule__IsParentConstraintRule__Group__3
+	rule__IsTargetConnectionTypeConstraintRule__Group__2__Impl
+	rule__IsTargetConnectionTypeConstraintRule__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__2__Impl
+rule__IsTargetConnectionTypeConstraintRule__Group__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getIsParentConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
+	{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
 	'('
-	{ after(grammarAccess.getIsParentConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
+	{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__3
+rule__IsTargetConnectionTypeConstraintRule__Group__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__IsParentConstraintRule__Group__3__Impl
-	rule__IsParentConstraintRule__Group__4
+	rule__IsTargetConnectionTypeConstraintRule__Group__3__Impl
+	rule__IsTargetConnectionTypeConstraintRule__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__3__Impl
+rule__IsTargetConnectionTypeConstraintRule__Group__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getIsParentConstraintRuleAccess().getTypeAssignment_3()); }
-	(rule__IsParentConstraintRule__TypeAssignment_3)
-	{ after(grammarAccess.getIsParentConstraintRuleAccess().getTypeAssignment_3()); }
+	{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeAssignment_3()); }
+	(rule__IsTargetConnectionTypeConstraintRule__TypeAssignment_3)
+	{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeAssignment_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__4
+rule__IsTargetConnectionTypeConstraintRule__Group__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__IsParentConstraintRule__Group__4__Impl
+	rule__IsTargetConnectionTypeConstraintRule__Group__4__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__Group__4__Impl
+rule__IsTargetConnectionTypeConstraintRule__Group__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getIsParentConstraintRuleAccess().getRightParenthesisKeyword_4()); }
+	{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 	')'
-	{ after(grammarAccess.getIsParentConstraintRuleAccess().getRightParenthesisKeyword_4()); }
+	{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 )
 ;
 finally {
@@ -2203,141 +2199,6 @@ rule__IsSourceTypeConstraintRule__Group__4__Impl
 	{ before(grammarAccess.getIsSourceTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 	')'
 	{ after(grammarAccess.getIsSourceTypeConstraintRuleAccess().getRightParenthesisKeyword_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__IsTargetConstraintRule__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IsTargetConstraintRule__Group__0__Impl
-	rule__IsTargetConstraintRule__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIsTargetConstraintRuleAccess().getIsTargetAction_0()); }
-	()
-	{ after(grammarAccess.getIsTargetConstraintRuleAccess().getIsTargetAction_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IsTargetConstraintRule__Group__1__Impl
-	rule__IsTargetConstraintRule__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIsTargetConstraintRuleAccess().getIsTargetKeyword_1()); }
-	'IsTarget'
-	{ after(grammarAccess.getIsTargetConstraintRuleAccess().getIsTargetKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IsTargetConstraintRule__Group__2__Impl
-	rule__IsTargetConstraintRule__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIsTargetConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
-	'('
-	{ after(grammarAccess.getIsTargetConstraintRuleAccess().getLeftParenthesisKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IsTargetConstraintRule__Group__3__Impl
-	rule__IsTargetConstraintRule__Group__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIsTargetConstraintRuleAccess().getTypeAssignment_3()); }
-	(rule__IsTargetConstraintRule__TypeAssignment_3)
-	{ after(grammarAccess.getIsTargetConstraintRuleAccess().getTypeAssignment_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IsTargetConstraintRule__Group__4__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIsTargetConstraintRuleAccess().getRightParenthesisKeyword_4()); }
-	')'
-	{ after(grammarAccess.getIsTargetConstraintRuleAccess().getRightParenthesisKeyword_4()); }
 )
 ;
 finally {
@@ -4074,6 +3935,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__ContainsTypeConstrainRule__TypeAssignment_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+		ruleFeatureTypeEnum
+		{ after(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__IsTargetTypeConstraintRule__TypeAssignment_3
 	@init {
 		int stackSize = keepStackSize();
@@ -4089,15 +3965,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IsParentConstraintRule__TypeAssignment_3
+rule__IsTargetConnectionTypeConstraintRule__TypeAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getIsParentConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+		{ before(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 		ruleFeatureTypeEnum
-		{ after(grammarAccess.getIsParentConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
+		{ after(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -4113,21 +3989,6 @@ rule__IsSourceTypeConstraintRule__TypeAssignment_3
 		{ before(grammarAccess.getIsSourceTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 		ruleFeatureTypeEnum
 		{ after(grammarAccess.getIsSourceTypeConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IsTargetConstraintRule__TypeAssignment_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
-		ruleFeatureTypeEnum
-		{ after(grammarAccess.getIsTargetConstraintRuleAccess().getTypeFeatureTypeEnumEnumRuleCall_3_0()); }
 	)
 ;
 finally {

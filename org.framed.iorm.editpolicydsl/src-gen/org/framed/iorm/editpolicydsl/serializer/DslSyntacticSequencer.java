@@ -64,11 +64,10 @@ public class DslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) '!' rule=PrimaryConstraint
-	 *     (rule start) (ambiguity) 'ContainsCompartment' '(' ')' (rule start)
+	 *     (rule start) (ambiguity) 'ContainsType' '(' type=FeatureTypeEnum
 	 *     (rule start) (ambiguity) 'InType' '(' type=FeatureTypeEnum
-	 *     (rule start) (ambiguity) 'IsParent' '(' type=FeatureTypeEnum
 	 *     (rule start) (ambiguity) 'IsSourceType' '(' type=FeatureTypeEnum
-	 *     (rule start) (ambiguity) 'IsTarget' '(' type=FeatureTypeEnum
+	 *     (rule start) (ambiguity) 'IsTargetConnectionType' '(' type=FeatureTypeEnum
 	 *     (rule start) (ambiguity) 'IsTargetType' '(' type=FeatureTypeEnum
 	 *     (rule start) (ambiguity) 'SourceEqualsTarget' '(' ')' (rule start)
 	 *     (rule start) (ambiguity) 'SourceEqualsTargetType' '(' ')' (rule start)

@@ -43,11 +43,10 @@ public class DslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeatureNameEnumAccess().getAlternatives(), "rule__FeatureNameEnum__Alternatives");
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getPolicyAccess().getGroup(), "rule__Policy__Group__0");
-					put(grammarAccess.getContainsCompartmentConstrainRuleAccess().getGroup(), "rule__ContainsCompartmentConstrainRule__Group__0");
+					put(grammarAccess.getContainsTypeConstrainRuleAccess().getGroup(), "rule__ContainsTypeConstrainRule__Group__0");
 					put(grammarAccess.getIsTargetTypeConstraintRuleAccess().getGroup(), "rule__IsTargetTypeConstraintRule__Group__0");
-					put(grammarAccess.getIsParentConstraintRuleAccess().getGroup(), "rule__IsParentConstraintRule__Group__0");
+					put(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getGroup(), "rule__IsTargetConnectionTypeConstraintRule__Group__0");
 					put(grammarAccess.getIsSourceTypeConstraintRuleAccess().getGroup(), "rule__IsSourceTypeConstraintRule__Group__0");
-					put(grammarAccess.getIsTargetConstraintRuleAccess().getGroup(), "rule__IsTargetConstraintRule__Group__0");
 					put(grammarAccess.getInTypeConstraintRuleAccess().getGroup(), "rule__InTypeConstraintRule__Group__0");
 					put(grammarAccess.getSourceEqualsTargetConstraintRuleAccess().getGroup(), "rule__SourceEqualsTargetConstraintRule__Group__0");
 					put(grammarAccess.getSourceEqualsTargetTypeConstraintRuleAccess().getGroup(), "rule__SourceEqualsTargetTypeConstraintRule__Group__0");
@@ -79,10 +78,10 @@ public class DslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPolicyAccess().getActionTypeAssignment_2(), "rule__Policy__ActionTypeAssignment_2");
 					put(grammarAccess.getPolicyAccess().getFeatureRuleAssignment_4(), "rule__Policy__FeatureRuleAssignment_4");
 					put(grammarAccess.getPolicyAccess().getConstraintRuleAssignment_7(), "rule__Policy__ConstraintRuleAssignment_7");
+					put(grammarAccess.getContainsTypeConstrainRuleAccess().getTypeAssignment_3(), "rule__ContainsTypeConstrainRule__TypeAssignment_3");
 					put(grammarAccess.getIsTargetTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__IsTargetTypeConstraintRule__TypeAssignment_3");
-					put(grammarAccess.getIsParentConstraintRuleAccess().getTypeAssignment_3(), "rule__IsParentConstraintRule__TypeAssignment_3");
+					put(grammarAccess.getIsTargetConnectionTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__IsTargetConnectionTypeConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getIsSourceTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__IsSourceTypeConstraintRule__TypeAssignment_3");
-					put(grammarAccess.getIsTargetConstraintRuleAccess().getTypeAssignment_3(), "rule__IsTargetConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getInTypeConstraintRuleAccess().getTypeAssignment_3(), "rule__InTypeConstraintRule__TypeAssignment_3");
 					put(grammarAccess.getIsFeatureAccess().getFeatureNameAssignment_1(), "rule__IsFeature__FeatureNameAssignment_1");
 					put(grammarAccess.getImplicationFeatureAccess().getRightRuleAssignment_1_2(), "rule__ImplicationFeature__RightRuleAssignment_1_2");

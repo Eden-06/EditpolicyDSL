@@ -37,25 +37,22 @@ enum FeatureNameEnum:
 
 // ----------------- Constraint Rules ------------------------------//
 ConstraintRule returns ConstraintRule:
-	TrueConstraintRule | FalseConstraintRule | ContainsCompartmentConstrainRule | IsTargetConstraintRule |
-	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | IsParentConstraintRule | 
+	TrueConstraintRule | FalseConstraintRule | ContainsTypeConstrainRule | IsTargetConnectionTypeConstraintRule |
+	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | 
 	SourceEqualsTargetConstraintRule | SourceEqualsTargetTypeConstraintRule | InTypeConstraintRule;
 
-ContainsCompartmentConstrainRule returns ContainsCompartment:
-	{ContainsCompartment} 'ContainsCompartment' '(' ')';
+ContainsTypeConstrainRule returns ContainsType:
+	{ContainsType} 'ContainsType' '(' type=FeatureTypeEnum ')';
 	
 IsTargetTypeConstraintRule returns IsTargetType:
 	{IsTargetType} 'IsTargetType' '(' type=FeatureTypeEnum ')';
 
-IsParentConstraintRule returns IsParent:
-	{IsParent} 'IsParent' '(' type=FeatureTypeEnum ')';
+IsTargetConnectionTypeConstraintRule returns IsTargetConnectionType:
+	{IsTargetConnectionType} 'IsTargetConnectionType' '(' type=FeatureTypeEnum ')';
 	
 IsSourceTypeConstraintRule returns IsSourceType:
 	{IsSourceType} 'IsSourceType' '(' type=FeatureTypeEnum ')';
-	
-IsTargetConstraintRule returns IsTarget:
-	{IsTarget} 'IsTarget' '(' type=FeatureTypeEnum ')';
-	
+		
 InTypeConstraintRule returns InType:
 	{InType} 'InType' '(' type=FeatureTypeEnum ')';	
 

@@ -129,24 +129,23 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTrueConstraintRuleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cFalseConstraintRuleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cContainsCompartmentConstrainRuleParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cIsTargetConstraintRuleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cContainsTypeConstrainRuleParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cIsTargetConnectionTypeConstraintRuleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cIsTargetTypeConstraintRuleParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cIsSourceTypeConstraintRuleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cIsParentConstraintRuleParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cSourceEqualsTargetConstraintRuleParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cSourceEqualsTargetTypeConstraintRuleParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cInTypeConstraintRuleParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cSourceEqualsTargetConstraintRuleParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cSourceEqualsTargetTypeConstraintRuleParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cInTypeConstraintRuleParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
 		//// ----------------- Constraint Rules ------------------------------//
 		//ConstraintRule:
-		//	TrueConstraintRule | FalseConstraintRule | ContainsCompartmentConstrainRule | IsTargetConstraintRule |
-		//	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | IsParentConstraintRule | SourceEqualsTargetConstraintRule |
+		//	TrueConstraintRule | FalseConstraintRule | ContainsTypeConstrainRule | IsTargetConnectionTypeConstraintRule |
+		//	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | SourceEqualsTargetConstraintRule |
 		//	SourceEqualsTargetTypeConstraintRule | InTypeConstraintRule;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//TrueConstraintRule | FalseConstraintRule | ContainsCompartmentConstrainRule | IsTargetConstraintRule |
-		//IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | IsParentConstraintRule | SourceEqualsTargetConstraintRule |
+		//TrueConstraintRule | FalseConstraintRule | ContainsTypeConstrainRule | IsTargetConnectionTypeConstraintRule |
+		//IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | SourceEqualsTargetConstraintRule |
 		//SourceEqualsTargetTypeConstraintRule | InTypeConstraintRule
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
@@ -156,11 +155,11 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FalseConstraintRule
 		public RuleCall getFalseConstraintRuleParserRuleCall_1() { return cFalseConstraintRuleParserRuleCall_1; }
 		
-		//ContainsCompartmentConstrainRule
-		public RuleCall getContainsCompartmentConstrainRuleParserRuleCall_2() { return cContainsCompartmentConstrainRuleParserRuleCall_2; }
+		//ContainsTypeConstrainRule
+		public RuleCall getContainsTypeConstrainRuleParserRuleCall_2() { return cContainsTypeConstrainRuleParserRuleCall_2; }
 		
-		//IsTargetConstraintRule
-		public RuleCall getIsTargetConstraintRuleParserRuleCall_3() { return cIsTargetConstraintRuleParserRuleCall_3; }
+		//IsTargetConnectionTypeConstraintRule
+		public RuleCall getIsTargetConnectionTypeConstraintRuleParserRuleCall_3() { return cIsTargetConnectionTypeConstraintRuleParserRuleCall_3; }
 		
 		//IsTargetTypeConstraintRule
 		public RuleCall getIsTargetTypeConstraintRuleParserRuleCall_4() { return cIsTargetTypeConstraintRuleParserRuleCall_4; }
@@ -168,44 +167,49 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//IsSourceTypeConstraintRule
 		public RuleCall getIsSourceTypeConstraintRuleParserRuleCall_5() { return cIsSourceTypeConstraintRuleParserRuleCall_5; }
 		
-		//IsParentConstraintRule
-		public RuleCall getIsParentConstraintRuleParserRuleCall_6() { return cIsParentConstraintRuleParserRuleCall_6; }
-		
 		//SourceEqualsTargetConstraintRule
-		public RuleCall getSourceEqualsTargetConstraintRuleParserRuleCall_7() { return cSourceEqualsTargetConstraintRuleParserRuleCall_7; }
+		public RuleCall getSourceEqualsTargetConstraintRuleParserRuleCall_6() { return cSourceEqualsTargetConstraintRuleParserRuleCall_6; }
 		
 		//SourceEqualsTargetTypeConstraintRule
-		public RuleCall getSourceEqualsTargetTypeConstraintRuleParserRuleCall_8() { return cSourceEqualsTargetTypeConstraintRuleParserRuleCall_8; }
+		public RuleCall getSourceEqualsTargetTypeConstraintRuleParserRuleCall_7() { return cSourceEqualsTargetTypeConstraintRuleParserRuleCall_7; }
 		
 		//InTypeConstraintRule
-		public RuleCall getInTypeConstraintRuleParserRuleCall_9() { return cInTypeConstraintRuleParserRuleCall_9; }
+		public RuleCall getInTypeConstraintRuleParserRuleCall_8() { return cInTypeConstraintRuleParserRuleCall_8; }
 	}
-	public class ContainsCompartmentConstrainRuleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.ContainsCompartmentConstrainRule");
+	public class ContainsTypeConstrainRuleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.ContainsTypeConstrainRule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cContainsCompartmentAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cContainsCompartmentKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cContainsTypeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cContainsTypeKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeFeatureTypeEnumEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//ContainsCompartmentConstrainRule ContainsCompartment:
-		//	{ContainsCompartment} 'ContainsCompartment' '(' ')';
+		//ContainsTypeConstrainRule ContainsType:
+		//	{ContainsType} 'ContainsType' '(' type=FeatureTypeEnum ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ContainsCompartment} 'ContainsCompartment' '(' ')'
+		//{ContainsType} 'ContainsType' '(' type=FeatureTypeEnum ')'
 		public Group getGroup() { return cGroup; }
 		
-		//{ContainsCompartment}
-		public Action getContainsCompartmentAction_0() { return cContainsCompartmentAction_0; }
+		//{ContainsType}
+		public Action getContainsTypeAction_0() { return cContainsTypeAction_0; }
 		
-		//'ContainsCompartment'
-		public Keyword getContainsCompartmentKeyword_1() { return cContainsCompartmentKeyword_1; }
+		//'ContainsType'
+		public Keyword getContainsTypeKeyword_1() { return cContainsTypeKeyword_1; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
+		//type=FeatureTypeEnum
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		
+		//FeatureTypeEnum
+		public RuleCall getTypeFeatureTypeEnumEnumRuleCall_3_0() { return cTypeFeatureTypeEnumEnumRuleCall_3_0; }
+		
 		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class IsTargetTypeConstraintRuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.IsTargetTypeConstraintRule");
@@ -242,28 +246,28 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
-	public class IsParentConstraintRuleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.IsParentConstraintRule");
+	public class IsTargetConnectionTypeConstraintRuleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.IsTargetConnectionTypeConstraintRule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cIsParentAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cIsParentKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cIsTargetConnectionTypeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cIsTargetConnectionTypeKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTypeFeatureTypeEnumEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//IsParentConstraintRule IsParent:
-		//	{IsParent} 'IsParent' '(' type=FeatureTypeEnum ')';
+		//IsTargetConnectionTypeConstraintRule IsTargetConnectionType:
+		//	{IsTargetConnectionType} 'IsTargetConnectionType' '(' type=FeatureTypeEnum ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{IsParent} 'IsParent' '(' type=FeatureTypeEnum ')'
+		//{IsTargetConnectionType} 'IsTargetConnectionType' '(' type=FeatureTypeEnum ')'
 		public Group getGroup() { return cGroup; }
 		
-		//{IsParent}
-		public Action getIsParentAction_0() { return cIsParentAction_0; }
+		//{IsTargetConnectionType}
+		public Action getIsTargetConnectionTypeAction_0() { return cIsTargetConnectionTypeAction_0; }
 		
-		//'IsParent'
-		public Keyword getIsParentKeyword_1() { return cIsParentKeyword_1; }
+		//'IsTargetConnectionType'
+		public Keyword getIsTargetConnectionTypeKeyword_1() { return cIsTargetConnectionTypeKeyword_1; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
@@ -299,41 +303,6 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'IsSourceType'
 		public Keyword getIsSourceTypeKeyword_1() { return cIsSourceTypeKeyword_1; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
-		
-		//type=FeatureTypeEnum
-		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
-		
-		//FeatureTypeEnum
-		public RuleCall getTypeFeatureTypeEnumEnumRuleCall_3_0() { return cTypeFeatureTypeEnumEnumRuleCall_3_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
-	}
-	public class IsTargetConstraintRuleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.framed.iorm.editpolicydsl.Dsl.IsTargetConstraintRule");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cIsTargetAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cIsTargetKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTypeFeatureTypeEnumEnumRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//IsTargetConstraintRule IsTarget:
-		//	{IsTarget} 'IsTarget' '(' type=FeatureTypeEnum ')';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{IsTarget} 'IsTarget' '(' type=FeatureTypeEnum ')'
-		public Group getGroup() { return cGroup; }
-		
-		//{IsTarget}
-		public Action getIsTargetAction_0() { return cIsTargetAction_0; }
-		
-		//'IsTarget'
-		public Keyword getIsTargetKeyword_1() { return cIsTargetKeyword_1; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
@@ -1539,11 +1508,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private final FeatureTypeEnumElements eFeatureTypeEnum;
 	private final FeatureNameEnumElements eFeatureNameEnum;
 	private final ConstraintRuleElements pConstraintRule;
-	private final ContainsCompartmentConstrainRuleElements pContainsCompartmentConstrainRule;
+	private final ContainsTypeConstrainRuleElements pContainsTypeConstrainRule;
 	private final IsTargetTypeConstraintRuleElements pIsTargetTypeConstraintRule;
-	private final IsParentConstraintRuleElements pIsParentConstraintRule;
+	private final IsTargetConnectionTypeConstraintRuleElements pIsTargetConnectionTypeConstraintRule;
 	private final IsSourceTypeConstraintRuleElements pIsSourceTypeConstraintRule;
-	private final IsTargetConstraintRuleElements pIsTargetConstraintRule;
 	private final InTypeConstraintRuleElements pInTypeConstraintRule;
 	private final SourceEqualsTargetConstraintRuleElements pSourceEqualsTargetConstraintRule;
 	private final SourceEqualsTargetTypeConstraintRuleElements pSourceEqualsTargetTypeConstraintRule;
@@ -1582,11 +1550,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		this.eFeatureTypeEnum = new FeatureTypeEnumElements();
 		this.eFeatureNameEnum = new FeatureNameEnumElements();
 		this.pConstraintRule = new ConstraintRuleElements();
-		this.pContainsCompartmentConstrainRule = new ContainsCompartmentConstrainRuleElements();
+		this.pContainsTypeConstrainRule = new ContainsTypeConstrainRuleElements();
 		this.pIsTargetTypeConstraintRule = new IsTargetTypeConstraintRuleElements();
-		this.pIsParentConstraintRule = new IsParentConstraintRuleElements();
+		this.pIsTargetConnectionTypeConstraintRule = new IsTargetConnectionTypeConstraintRuleElements();
 		this.pIsSourceTypeConstraintRule = new IsSourceTypeConstraintRuleElements();
-		this.pIsTargetConstraintRule = new IsTargetConstraintRuleElements();
 		this.pInTypeConstraintRule = new InTypeConstraintRuleElements();
 		this.pSourceEqualsTargetConstraintRule = new SourceEqualsTargetConstraintRuleElements();
 		this.pSourceEqualsTargetTypeConstraintRule = new SourceEqualsTargetTypeConstraintRuleElements();
@@ -1705,8 +1672,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// ----------------- Constraint Rules ------------------------------//
 	//ConstraintRule:
-	//	TrueConstraintRule | FalseConstraintRule | ContainsCompartmentConstrainRule | IsTargetConstraintRule |
-	//	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | IsParentConstraintRule | SourceEqualsTargetConstraintRule |
+	//	TrueConstraintRule | FalseConstraintRule | ContainsTypeConstrainRule | IsTargetConnectionTypeConstraintRule |
+	//	IsTargetTypeConstraintRule | IsSourceTypeConstraintRule | SourceEqualsTargetConstraintRule |
 	//	SourceEqualsTargetTypeConstraintRule | InTypeConstraintRule;
 	public ConstraintRuleElements getConstraintRuleAccess() {
 		return pConstraintRule;
@@ -1716,14 +1683,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstraintRuleAccess().getRule();
 	}
 	
-	//ContainsCompartmentConstrainRule ContainsCompartment:
-	//	{ContainsCompartment} 'ContainsCompartment' '(' ')';
-	public ContainsCompartmentConstrainRuleElements getContainsCompartmentConstrainRuleAccess() {
-		return pContainsCompartmentConstrainRule;
+	//ContainsTypeConstrainRule ContainsType:
+	//	{ContainsType} 'ContainsType' '(' type=FeatureTypeEnum ')';
+	public ContainsTypeConstrainRuleElements getContainsTypeConstrainRuleAccess() {
+		return pContainsTypeConstrainRule;
 	}
 	
-	public ParserRule getContainsCompartmentConstrainRuleRule() {
-		return getContainsCompartmentConstrainRuleAccess().getRule();
+	public ParserRule getContainsTypeConstrainRuleRule() {
+		return getContainsTypeConstrainRuleAccess().getRule();
 	}
 	
 	//IsTargetTypeConstraintRule IsTargetType:
@@ -1736,14 +1703,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getIsTargetTypeConstraintRuleAccess().getRule();
 	}
 	
-	//IsParentConstraintRule IsParent:
-	//	{IsParent} 'IsParent' '(' type=FeatureTypeEnum ')';
-	public IsParentConstraintRuleElements getIsParentConstraintRuleAccess() {
-		return pIsParentConstraintRule;
+	//IsTargetConnectionTypeConstraintRule IsTargetConnectionType:
+	//	{IsTargetConnectionType} 'IsTargetConnectionType' '(' type=FeatureTypeEnum ')';
+	public IsTargetConnectionTypeConstraintRuleElements getIsTargetConnectionTypeConstraintRuleAccess() {
+		return pIsTargetConnectionTypeConstraintRule;
 	}
 	
-	public ParserRule getIsParentConstraintRuleRule() {
-		return getIsParentConstraintRuleAccess().getRule();
+	public ParserRule getIsTargetConnectionTypeConstraintRuleRule() {
+		return getIsTargetConnectionTypeConstraintRuleAccess().getRule();
 	}
 	
 	//IsSourceTypeConstraintRule IsSourceType:
@@ -1754,16 +1721,6 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getIsSourceTypeConstraintRuleRule() {
 		return getIsSourceTypeConstraintRuleAccess().getRule();
-	}
-	
-	//IsTargetConstraintRule IsTarget:
-	//	{IsTarget} 'IsTarget' '(' type=FeatureTypeEnum ')';
-	public IsTargetConstraintRuleElements getIsTargetConstraintRuleAccess() {
-		return pIsTargetConstraintRule;
-	}
-	
-	public ParserRule getIsTargetConstraintRuleRule() {
-		return getIsTargetConstraintRuleAccess().getRule();
 	}
 	
 	//InTypeConstraintRule InType:
