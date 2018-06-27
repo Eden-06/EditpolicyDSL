@@ -11,11 +11,16 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
+import com.microsoft.z3.Context;
+
 import editpolicymodel.*;
+import editpolicymodel.Model;
 
 public class EditpolicyValidator {
 	
 	static List<Model> models = new LinkedList<>();
+	static SubsumptionSolver sSolver = new SubsumptionSolver();
+
 	public static void main(String[] args) {
 		System.out.println("Loading all files:");
 		List<File> fileList = new LinkedList<>();
@@ -26,27 +31,30 @@ public class EditpolicyValidator {
 		for(Model m: EditpolicyValidator.models) {
 			EditpolicyValidator.checkModel(m);
 		}
+		System.out.println("starting Subsumtion Solver...");
+		EditpolicyValidator.sSolver.checkForSubsumtions();
 	}
 
 	private static void checkModel(Model model) {
 		for (Policy p : model.getPolicies()) {
-			EditpolicyValidator.checkConstraint(p.getConstraintRule());
-			EditpolicyValidator.checkFeature(p.getFeatureRule());
+			//EditpolicyValidator.checkConstraint(p.getConstraintRule());
+			//EditpolicyValidator.checkFeature(p.getFeatureRule());
+			EditpolicyValidator.sSolver.addPolicy(p);
 		}
 	}
 
 	private static void checkConstraint(ConstraintRule r) {
-		//System.out.println("checking Constraint: " + r.toString());
-		ConstraintSolver constraintSolver = new ConstraintSolver();
+		System.out.println("checking Constraint: " + r.toString());
+		LogicSolver<ConstraintRule> constraintSolver = new LogicSolver<>(new Context());
 		constraintSolver.parseRule(r);
-		constraintSolver.solve();
+		constraintSolver.isSatisfiable();
 	}
 
 	private static void checkFeature(FeatureRule r) {
-		//System.out.println("checking Feature: " + r.toString());
-		FeatureSolver featureSolver = new FeatureSolver();
+		System.out.println("checking Feature: " + r.toString());
+		LogicSolver<FeatureRule> featureSolver = new LogicSolver<>(new Context());
 		featureSolver.parseRule(r);
-		featureSolver.solve();
+		featureSolver.isSatisfiable();
 	}
 
 	/*

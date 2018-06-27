@@ -33,6 +33,11 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="org.sat4j.core-src.jar"/>
 	<classpathentry kind="lib" path="org.sat4j.core.jar"/>
+	<classpathentry kind="lib" path="com.microsoft.z3.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="org.framed.iorm.editpolicymodel.validator/z3"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.framed.iorm.featuremodel"/>
 	<classpathentry kind="src" path="/org.framed.iorm.model"/>
 	<classpathentry kind="lib" path="/home/chrisu/.p2/pool/plugins/org.eclipse.osgi_3.12.50.v20170928-1321.jar" sourcepath="/home/chrisu/.p2/pool/plugins/org.eclipse.osgi_3.12.50.v20170928-1321.jar">
