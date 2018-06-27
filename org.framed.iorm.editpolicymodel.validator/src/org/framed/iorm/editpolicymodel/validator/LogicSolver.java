@@ -30,26 +30,24 @@ import editpolicymodel.TypeArgumentRule;
 public class LogicSolver<T> {	
 	protected Context ctx;
 	protected BoolExpr expression;
+	T rule;
 
 	public LogicSolver(Context ctx) {
     	this.ctx = ctx;
 	}
 	
 	public void parseRule(T rule) {
+		this.rule = rule;
 		this.expression = this.dispatchRule(rule);
 	}
 	
-	public void isSatisfiable() {
+	public void isSatisfiable(String name) {
 			Solver solver = this.ctx.mkSolver();
 	        solver.add(this.expression);
 	        Status status = solver.check();
-            System.out.println("STATUS Check: " + status);
 
 	        if (status != Status.SATISFIABLE) {
-	            System.out.println("NO  SAT!");
-	            throw new RuntimeException("not satisfiable!");
-	        } else {
-	            System.out.println("Satisfiable!");
+	            System.out.println("WARNING: " + name + " " + this.rule.getClass().getName() + " " + this.expression + " is not satisfiable!");
 	        }
 	}
 	

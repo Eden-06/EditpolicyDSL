@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Collections;
 import java.util.List;
 import java.util.LinkedList;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -22,46 +21,56 @@ public class EditpolicyValidator {
 	static SubsumptionSolver sSolver = new SubsumptionSolver();
 
 	public static void main(String[] args) {
-		System.out.println("Loading all files:");
 		List<File> fileList = new LinkedList<>();
-		EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0/org.framed.iorm.ui/", fileList);
+		EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0/org.framed.iorm.ui/modules/", fileList);
+		EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0/org.framed.iorm.ui/core/", fileList);
+		//EditpolicyValidator.getAllEditpolicyFiles("./testpolicies/", fileList);
 		for (File file : fileList) {
 			EditpolicyValidator.loadEditPolicyFile(file.getAbsolutePath());
 		}
+		System.out.println("Reading Policies, checking satisfiability...");
+
 		for(Model m: EditpolicyValidator.models) {
 			EditpolicyValidator.checkModel(m);
 		}
-		System.out.println("starting Subsumtion Solver...");
+		System.out.println("Checking whether policies are subsumed by other rules...");
 		EditpolicyValidator.sSolver.checkForSubsumtions();
+		System.out.println("finished");
 	}
 
 	private static void checkModel(Model model) {
 		for (Policy p : model.getPolicies()) {
-			//EditpolicyValidator.checkConstraint(p.getConstraintRule());
-			//EditpolicyValidator.checkFeature(p.getFeatureRule());
+			EditpolicyValidator.checkFeature(p);
+			EditpolicyValidator.checkConstraint(p);
 			EditpolicyValidator.sSolver.addPolicy(p);
 		}
 	}
 
-	private static void checkConstraint(ConstraintRule r) {
-		System.out.println("checking Constraint: " + r.toString());
+	public static String getNameForPolicy(Policy p) {
+		String type = null;
+		if(p.getActionType() != null) {
+			type = p.getActionType().getName();
+		} 
+		return p.getAction().getName() + type;
+	}
+	
+	private static void checkConstraint(Policy p) {
 		LogicSolver<ConstraintRule> constraintSolver = new LogicSolver<>(new Context());
-		constraintSolver.parseRule(r);
-		constraintSolver.isSatisfiable();
+		constraintSolver.parseRule(p.getConstraintRule());
+		constraintSolver.isSatisfiable(getNameForPolicy(p));
 	}
 
-	private static void checkFeature(FeatureRule r) {
-		System.out.println("checking Feature: " + r.toString());
+	private static void checkFeature(Policy p) {
 		LogicSolver<FeatureRule> featureSolver = new LogicSolver<>(new Context());
-		featureSolver.parseRule(r);
-		featureSolver.isSatisfiable();
+		featureSolver.parseRule(p.getFeatureRule());
+		featureSolver.isSatisfiable(getNameForPolicy(p));
 	}
 
 	/*
 	 * Load editPolicy Model from file.
 	 */
 	private static void loadEditPolicyFile(String filename) {
-		System.out.println("EDITPOLICY loading: " + filename);
+		System.out.println("loading: ..." + filename.substring(Math.max(filename.length()-100,0), filename.length()));
 
 		try {
 			ResourceSet set = new ResourceSetImpl();
@@ -86,9 +95,8 @@ public class EditpolicyValidator {
 
 	public static void getAllEditpolicyFiles(String directoryName, List<File> files) {
 		File directory = new File(directoryName);
-
-		// Get all the files from a directory.
 		File[] fList = directory.listFiles();
+		if(fList == null) return;
 		for (File file : fList) {
 			if (file.isFile() && file.getName().endsWith(".editpolicy")) {
 				files.add(file);
