@@ -3,12 +3,14 @@ package org.framed.iorm.editpolicymodel.validator;
 import java.io.File;
 import java.util.Collections;
 import java.util.List;
-import java.util.LinkedList;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+
+import java.util.LinkedList;
 
 import com.microsoft.z3.Context;
 
@@ -22,9 +24,9 @@ public class EditpolicyValidator {
 
 	public static void main(String[] args) {
 		List<File> fileList = new LinkedList<>();
-		EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0/org.framed.iorm.ui/modules/", fileList);
-		EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0/org.framed.iorm.ui/core/", fileList);
-		//EditpolicyValidator.getAllEditpolicyFiles("./testpolicies/", fileList);
+		//EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0-develop/org.framed.iorm.ui/modules/", fileList);
+		//EditpolicyValidator.getAllEditpolicyFiles("../../FRaMED-2.0-develop/org.framed.iorm.ui/core/", fileList);
+		EditpolicyValidator.getAllEditpolicyFiles("./testpolicies/", fileList);
 		for (File file : fileList) {
 			EditpolicyValidator.loadEditPolicyFile(file.getAbsolutePath());
 		}
