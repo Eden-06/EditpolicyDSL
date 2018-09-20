@@ -2,9 +2,9 @@
 
 A DSL for the simple creation of editpolicy models for the FRaMED 2.0 software product line.
 
-Based on the EditpolicyModel used in [FRaMED 2.0](https://github.com/Eden-06/FRaMED-2.0).
+Based on the *Editpolicy Model* used in [FRaMED 2.0](https://github.com/Eden-06/FRaMED-2.0).
 
-### Install in FRaMED-2 project
+### Install in FRaMED-2.0 project
 Import the *EditpolicyDSL* repository into Eclipse.
 1.  Select "File" -> "Import" to open the import wizard, select "Projects from Git" and hit "Next>".
 2.  Enter <https://github.com/Eden-06/EditpolicyDSL.git> into the URI field and hit "Next>"
