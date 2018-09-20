@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.framed.iorm.editpolicydsl
-Bundle-Vendor: My Company
+Bundle-Name: EditPolicy DSL
+Bundle-Vendor: TU Dresden
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.framed.iorm.editpolicydsl; singleton:=true
 Bundle-ActivationPolicy: lazy
@@ -10,10 +10,10 @@ Require-Bundle: org.framed.iorm.editpolicymodel,
  org.eclipse.xtext,
  org.eclipse.xtext.xbase,
  org.eclipse.equinox.common,
- org.eclipse.xtext.xbase.lib,
- org.antlr.runtime,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
  org.eclipse.xtext.util,
- org.eclipse.xtend.lib
+ org.eclipse.xtend.lib;bundle-version="2.14.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.framed.iorm.editpolicydsl.validation,
  org.framed.iorm.editpolicydsl.scoping,
